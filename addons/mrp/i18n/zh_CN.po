@@ -994,13 +994,19 @@ msgstr "BOM组件"
 #. odoo-javascript
 #: code:addons/mrp/models/mrp_bom_cost.py:0
 #: code:addons/mrp/models/mrp_bom_cost.py:0
+#: code:addons/mrp/models/product.py:0 code:addons/mrp/models/product.py:0
+#: code:addons/mrp/models/product.py:0 code:addons/mrp/models/product.py:0
 #: code:addons/mrp/static/src/components/bom_overview_table/mrp_bom_overview_table.xml:0
 #: model:ir.model.fields,field_description:mrp.field_mrp_bom__bom_cost
+#: model:ir.model.fields,field_description:mrp.field_product_product__bom_cost
+#: model:ir.model.fields,field_description:mrp.field_product_template__bom_cost
 #: model:ir.model.fields,help:mrp.field_mrp_bom__bom_cost
+#: model:ir.model.fields,help:mrp.field_product_product__bom_cost
+#: model:ir.model.fields,help:mrp.field_product_template__bom_cost
 #: model_terms:ir.ui.view,arch_db:mrp.report_mrp_bom
 #, python-format
 msgid "BoM Cost"
-msgstr "BOM 成本"
+msgstr "BOM成本"
 
 
 #. module: mrp
@@ -1012,7 +1018,7 @@ msgstr "BOM 成本"
 #: model_terms:ir.ui.view,arch_db:mrp.view_mrp_bom_filter
 #, python-format
 msgid "BoM Aggregate"
-msgstr "BOM 全范围"
+msgstr "BOM全范围"
 
 #. module: mrp
 #. odoo-python

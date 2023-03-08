@@ -19,6 +19,14 @@ class MrpBomCost(ReportBomStructure):
         #store=True
     )
 
+    bom_cost_store = fields.Float(
+        _("BoM Cost"), default=False,
+        compute='_compute_bom_cost_store',
+        search='_search_bom_cost',
+        help=_("BoM Cost"),
+        store=True
+    )
+
     bom_aggregate = fields.Char(
         _("BoM Aggregate"),
         compute='_compute_bom_aggregate',
@@ -35,8 +43,8 @@ class MrpBomCost(ReportBomStructure):
 
 
     def _get_report_data(self, record):
-        if record not in self._dico:
-            self._dico[record] = super()._get_report_data(record.id)
+        #if record not in self._dico:
+        self._dico[record] = super()._get_report_data(record.id)
         return self._dico[record]
 
     def _print_template(self, t):
@@ -84,7 +92,12 @@ class MrpBomCost(ReportBomStructure):
         for record in self:
             report_data = self._get_report_data(record)
             record.bom_cost = report_data['lines']['bom_cost']
+            record.bom_cost_store = record.bom_cost
 
+    @api.depends('bom_cost')
+    def _compute_bom_cost_store(self):
+        for record in self:
+            record.bom_cost_store = record.bom_cost
     def _search_bom_cost(self, operator, value):
         if operator == '>':
             ids = self.env['mrp.bom'].search([]).filtered(

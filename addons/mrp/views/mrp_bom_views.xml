@@ -180,7 +180,8 @@
             <field name="inherit_id" ref="mrp_bom_tree_view"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='company_id']" position="after">
-                    <field name="bom_cost" />
+                    <field name="bom_cost" optional="hide" invisible="1" />
+                    <field name="bom_cost_store" optional="show" />
                     <field name="bom_lead_time"/>
                 </xpath>
             </field>
