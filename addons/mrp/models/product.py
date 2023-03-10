@@ -79,6 +79,14 @@ class ProductTemplate(models.Model):
             _logger.info('template: %s', bom.product_tmpl_id.display_name)
         return [('id', 'in', ids)]
 
+    @api.returns('self', lambda value: value.id)
+    def copy(self, default=None):
+        templateCopy = super(ProductTemplate, self).copy(default=default)
+        for template in self:
+            if template.bom_ids[0]:
+                template.bom_ids[0].copy({'product_tmpl_id': templateCopy.id})
+        return templateCopy
+
     def _compute_bom_count(self):
         for product in self:
             product.bom_count = self.env['mrp.bom'].search_count(['|', ('product_tmpl_id', '=', product.id), ('byproduct_ids.product_id.product_tmpl_id', '=', product.id)])
@@ -175,6 +183,7 @@ class ProductProduct(models.Model):
     def _compute_bom_cost(self):
         for record in self:
             record.bom_cost = self.variant_bom_ids[0].bom_cost
+
 
     def _search_bom_cost(self, operator, value):
         _logger.info('ProductProduct._search_bom_cost: %s %s', operator, value)
