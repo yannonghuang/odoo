@@ -83,7 +83,7 @@ class ProductTemplate(models.Model):
     def copy(self, default=None):
         templateCopy = super(ProductTemplate, self).copy(default=default)
         for template in self:
-            if template.bom_ids[0]:
+            if template.bom_count > 0:
                 template.bom_ids[0].copy({'product_tmpl_id': templateCopy.id})
         return templateCopy
 
@@ -183,7 +183,6 @@ class ProductProduct(models.Model):
     def _compute_bom_cost(self):
         for record in self:
             record.bom_cost = self.variant_bom_ids[0].bom_cost
-
 
     def _search_bom_cost(self, operator, value):
         _logger.info('ProductProduct._search_bom_cost: %s %s', operator, value)
