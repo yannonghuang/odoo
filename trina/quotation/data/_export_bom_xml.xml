@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--
+    © 2017 Creu Blanca
+    License AGPL-3.0 or later (https://www.gnuorg/licenses/agpl.html).
+    -->
+    <record id="export_bom_xml_report" model="ir.actions.report">
+        <field name="name">Export BOM to XML</field>
+        <field name="model">mrp.bom</field>
+        <field name="report_type">xml</field>
+        <field name="report_name">export_bom_xml.export_bom_xml</field>
+        <field name="report_file">mrp_bom</field>
+    </record>
+</odoo>

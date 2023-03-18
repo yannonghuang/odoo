@@ -19,4 +19,4 @@ from . import stock_lot
 from . import stock_rule
 from . import stock_scrap
 from . import stock_warehouse
-from . import mrp_bom_cost
+#from . import mrp_bom_cost

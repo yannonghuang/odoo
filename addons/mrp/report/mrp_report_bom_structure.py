@@ -201,10 +201,10 @@ class ReportBomStructure(models.AbstractModel):
             'attachment_ids': attachment_ids,
             'phantom_bom': bom.type == 'phantom',
             'parent_id': parent_bom and parent_bom.id or False,
-            'aggregate': [{
-                'id': (product.id if product.product_variant_count > 1 else product.product_tmpl_id.id) or bom.product_tmpl_id.id,
-                'model': 'product.product' if product.product_variant_count > 1 else 'product.template'
-            }]
+            #'aggregate': [{
+            #    'id': (product.id if product.product_variant_count > 1 else product.product_tmpl_id.id) or bom.product_tmpl_id.id,
+            #    'model': 'product.product' if product.product_variant_count > 1 else 'product.template'
+            #}]
         }
 
         if not is_minimized:
@@ -227,7 +227,7 @@ class ReportBomStructure(models.AbstractModel):
                 component = self.with_context(parent_product_id=product.id)._get_component_data(bom, warehouse, line, line_quantity, level + 1, new_index, product_info, ignore_stock)
             components.append(component)
             bom_report_line['bom_cost'] += component['bom_cost']
-            bom_report_line['aggregate'] += component['aggregate']
+            #bom_report_line['aggregate'] += component['aggregate']
 
         bom_report_line['components'] = components
         bom_report_line['producible_qty'] = self._compute_current_production_capacity(bom_report_line)
@@ -306,10 +306,10 @@ class ReportBomStructure(models.AbstractModel):
             'parent_id': parent_bom.id,
             'level': level or 0,
             'attachment_ids': attachment_ids,
-            'aggregate': [{
-                'id': bom_line.product_id.id if bom_line.product_id.product_variant_count > 1 else bom_line.product_id.product_tmpl_id.id,
-                'model': 'product.product' if bom_line.product_id.product_variant_count > 1 else 'product.template',
-            }]
+            #'aggregate': [{
+            #    'id': bom_line.product_id.id if bom_line.product_id.product_variant_count > 1 else bom_line.product_id.product_tmpl_id.id,
+            #    'model': 'product.product' if bom_line.product_id.product_variant_count > 1 else 'product.template',
+            #}]
         }
 
     @api.model

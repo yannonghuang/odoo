@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_trina_root"
+        name="Trina"
+        sequence="1450">
+
+        <menuitem id="menu_trina_product"
+            name="Product"
+            sequence="20"/>
+
+        <menuitem id="menu_trina_bom"
+            name="BOM"
+            sequence="25"/>
+
+    </menuitem>
+</odoo>

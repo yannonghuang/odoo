@@ -20,27 +20,7 @@ OPERATORS = {
     '=': py_operator.eq,
     '!=': py_operator.ne
 }
-
-class ProductTemplate(models.Model):
-    _inherit = ["product.template"]
-
-    bom_line_ids = fields.One2many('mrp.bom.line', 'product_tmpl_id', 'BoM Components')
-    bom_ids = fields.One2many('mrp.bom', 'product_tmpl_id', 'Bill of Materials')
-    bom_count = fields.Integer('# Bill of Material',
-        compute='_compute_bom_count', compute_sudo=False)
-    used_in_bom_count = fields.Integer('# of BoM Where is Used',
-        compute='_compute_used_in_bom_count', compute_sudo=False)
-    mrp_product_qty = fields.Float('Manufactured', digits='Product Unit of Measure',
-        compute='_compute_mrp_product_qty', compute_sudo=False)
-    produce_delay = fields.Float(
-        'Manufacturing Lead Time', default=0.0,
-        help="Average lead time in days to manufacture this product. In the case of multi-level BOM, the manufacturing lead times of the components will be added. In case the product is subcontracted, this can be used to determine the date at which components should be sent to the subcontractor.")
-    is_kits = fields.Boolean(compute='_compute_is_kits', compute_sudo=False)
-    days_to_prepare_mo = fields.Float(
-        string="Days to prepare Manufacturing Order", default=0.0,
-        help="Create and confirm Manufacturing Orders these many days in advance, to have enough time to replenish components or manufacture semi-finished products.\n"
-             "Note that this does not affect the MO scheduled date, which still respects the just-in-time mechanism.")
-
+'''
     bom_cost = fields.Float(
         _("BoM Cost"), default=False,
         compute='_compute_bom_cost',
@@ -86,6 +66,28 @@ class ProductTemplate(models.Model):
             if template.bom_count > 0:
                 template.bom_ids[0].copy({'product_tmpl_id': templateCopy.id})
         return templateCopy
+'''
+
+class ProductTemplate(models.Model):
+    _inherit = ["product.template"]
+
+    bom_line_ids = fields.One2many('mrp.bom.line', 'product_tmpl_id', 'BoM Components')
+    bom_ids = fields.One2many('mrp.bom', 'product_tmpl_id', 'Bill of Materials')
+    bom_count = fields.Integer('# Bill of Material',
+        compute='_compute_bom_count', compute_sudo=False)
+    used_in_bom_count = fields.Integer('# of BoM Where is Used',
+        compute='_compute_used_in_bom_count', compute_sudo=False)
+    mrp_product_qty = fields.Float('Manufactured', digits='Product Unit of Measure',
+        compute='_compute_mrp_product_qty', compute_sudo=False)
+    produce_delay = fields.Float(
+        'Manufacturing Lead Time', default=0.0,
+        help="Average lead time in days to manufacture this product. In the case of multi-level BOM, the manufacturing lead times of the components will be added. In case the product is subcontracted, this can be used to determine the date at which components should be sent to the subcontractor.")
+    is_kits = fields.Boolean(compute='_compute_is_kits', compute_sudo=False)
+    days_to_prepare_mo = fields.Float(
+        string="Days to prepare Manufacturing Order", default=0.0,
+        help="Create and confirm Manufacturing Orders these many days in advance, to have enough time to replenish components or manufacture semi-finished products.\n"
+             "Note that this does not affect the MO scheduled date, which still respects the just-in-time mechanism.")
+
 
     def _compute_bom_count(self):
         for product in self:
@@ -158,20 +160,8 @@ class ProductTemplate(models.Model):
             }
         return res
 
-class ProductProduct(models.Model):
-    _inherit = "product.product"
 
-    variant_bom_ids = fields.One2many('mrp.bom', 'product_id', 'BOM Product Variants')
-    bom_line_ids = fields.One2many('mrp.bom.line', 'product_id', 'BoM Components')
-    bom_count = fields.Integer('# Bill of Material',
-        compute='_compute_bom_count', compute_sudo=False)
-    used_in_bom_count = fields.Integer('# BoM Where Used',
-        compute='_compute_used_in_bom_count', compute_sudo=False)
-    mrp_product_qty = fields.Float('Manufactured', digits='Product Unit of Measure',
-        compute='_compute_mrp_product_qty', compute_sudo=False)
-    is_kits = fields.Boolean(compute="_compute_is_kits", compute_sudo=False)
-
-
+"""
     bom_cost = fields.Float(
         _("BoM Cost"), default=False,
         compute='_compute_bom_cost',
@@ -209,6 +199,19 @@ class ProductProduct(models.Model):
             ids.append(bom.product_id.id)
             _logger.info('product: %s', bom.product_id.display_name)
         return [('id', 'in', ids)]
+"""
+class ProductProduct(models.Model):
+    _inherit = "product.product"
+
+    variant_bom_ids = fields.One2many('mrp.bom', 'product_id', 'BOM Product Variants')
+    bom_line_ids = fields.One2many('mrp.bom.line', 'product_id', 'BoM Components')
+    bom_count = fields.Integer('# Bill of Material',
+        compute='_compute_bom_count', compute_sudo=False)
+    used_in_bom_count = fields.Integer('# BoM Where Used',
+        compute='_compute_used_in_bom_count', compute_sudo=False)
+    mrp_product_qty = fields.Float('Manufactured', digits='Product Unit of Measure',
+        compute='_compute_mrp_product_qty', compute_sudo=False)
+    is_kits = fields.Boolean(compute="_compute_is_kits", compute_sudo=False)
 
     def _compute_bom_count(self):
         for product in self:

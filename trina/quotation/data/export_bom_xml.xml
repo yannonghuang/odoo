@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2018 ForgeFlow S.L.
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <report
+        id="export_bom_xml_report"
+        model="mrp.bom"
+        string="Export BOM to XML"
+        report_type="xml"
+        name="export_bom_xml.export_bom_xml"
+        file="mrp_bom"
+        attachment_use="False"
+    />
+
+</odoo>
