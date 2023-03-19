@@ -102,7 +102,7 @@ class TrinaBom(BomAggregate):
     bom_cost = fields.Float(
         _("BoM Cost"), default=False,
         compute='_compute_bom_cost',
-        search='_search_bom_cost',
+        #search='_search_bom_cost',
         help=_("BoM Cost"),
         #store=True
     )
@@ -110,7 +110,7 @@ class TrinaBom(BomAggregate):
     bom_cost_store = fields.Float(
         _("BoM Cost"), default=False,
         compute='_compute_bom_cost_store',
-        search='_search_bom_cost',
+        #search='_search_bom_cost',
         help=_("BoM Cost"),
         store=True
     )

@@ -108,7 +108,7 @@ class BomAggregate(ReportBomStructure):
                 continue
             line_quantity = (current_quantity / (bom.product_qty or 1.0)) * line.product_qty
             if line.child_bom_id:
-                _logger.info('line.child_bom_id: %s', line.child_bom_id)
+                #_logger.info('line.child_bom_id: %s', line.child_bom_id)
                 component = self.with_context(parent_product_id=product.id)._get_bom_data(line.child_bom_id, warehouse, line.product_id, line_quantity, bom_line=line, level=level + 1, parent_bom=bom,
                                                                                           index=new_index, product_info=product_info, ignore_stock=ignore_stock)
             else:
