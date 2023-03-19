@@ -1,7 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<data noupdate="1">
-		<record id="export_product_tmpl_45" model="product.product">
+		<record id="export_product_tmpl_59" model="product.product">
+			<field name = "name">Trina Grand Grand (copy)</field>
+			<field name = "sequence">1</field>
+			<field name = "detailed_type">product</field>
+			<field name = "list_price">1.0</field>
+			<field name = "sale_ok">True</field>
+			<field name = "purchase_ok">True</field>
+			<field name = "active">True</field>
+			<field name = "priority">0</field>
+			<field name = "length">1.0</field>
+			<field name = "material">AL6005-T5</field>
+			<field name = "wind_load">10.0</field>
+		</record>
+		<record id="export_bom_16" model="mrp.bom">
+			<field name = "active">True</field>
+			<field name = "type">normal</field>
+			<field name = "product_qty">1.0</field>
+			<field name = "ready_to_produce">all_available</field>
+			<field name = "consumption">warning</field>
+			<field name = "number_of_panels">248</field>
+			<field name = "panel_length">2102.0</field>
+			<field name = "panel_width">1040.0</field>
+			<field name = "panel_power">400.0</field>
+			<field name = "panel_spacing">1090.0</field>
+			<field name = "channel_length">4400.0</field>
+			<field name = "number_of_isolators">5</field>
+			<field name = "wind_load">10.0</field>
+			<field name = "tilt_angle">45.0</field>
+			<field name = "installation_type">roof</field>
+			<field name = "product_tmpl_id" ref = "export_product_tmpl_59_product_template" />
+		</record>
+
+		<record id="export_product_tmpl_55" model="product.product">
+			<field name = "name">Trina Grand</field>
+			<field name = "sequence">1</field>
+			<field name = "detailed_type">product</field>
+			<field name = "list_price">1.0</field>
+			<field name = "sale_ok">True</field>
+			<field name = "purchase_ok">True</field>
+			<field name = "active">True</field>
+			<field name = "priority">0</field>
+			<field name = "length">1.0</field>
+			<field name = "material">AL6005-T5</field>
+			<field name = "wind_load">10.0</field>
+		</record>
+		<record id="export_bom_12" model="mrp.bom">
+			<field name = "active">True</field>
+			<field name = "type">normal</field>
+			<field name = "product_qty">1.0</field>
+			<field name = "ready_to_produce">all_available</field>
+			<field name = "consumption">warning</field>
+			<field name = "number_of_panels">248</field>
+			<field name = "panel_length">2102.0</field>
+			<field name = "panel_width">1040.0</field>
+			<field name = "panel_power">400.0</field>
+			<field name = "panel_spacing">1090.0</field>
+			<field name = "channel_length">4400.0</field>
+			<field name = "number_of_isolators">5</field>
+			<field name = "wind_load">10.0</field>
+			<field name = "tilt_angle">45.0</field>
+			<field name = "installation_type">roof</field>
+			<field name = "product_tmpl_id" ref = "export_product_tmpl_55_product_template" />
+		</record>
+
+		<record id="export_product_tmpl_56" model="product.product">
+			<field name = "name">Trina total solution</field>
+			<field name = "sequence">1</field>
+			<field name = "detailed_type">product</field>
+			<field name = "list_price">1.0</field>
+			<field name = "sale_ok">True</field>
+			<field name = "purchase_ok">True</field>
+			<field name = "active">True</field>
+			<field name = "priority">0</field>
+			<field name = "length">1.0</field>
+			<field name = "material">AL6005-T5</field>
+			<field name = "wind_load">10.0</field>
+		</record>
+		<record id="export_bom_13" model="mrp.bom">
+			<field name = "active">True</field>
+			<field name = "type">normal</field>
+			<field name = "product_qty">1.0</field>
+			<field name = "ready_to_produce">all_available</field>
+			<field name = "consumption">warning</field>
+			<field name = "number_of_panels">248</field>
+			<field name = "panel_length">2102.0</field>
+			<field name = "panel_width">1040.0</field>
+			<field name = "panel_power">400.0</field>
+			<field name = "panel_spacing">1090.0</field>
+			<field name = "channel_length">4400.0</field>
+			<field name = "number_of_isolators">5</field>
+			<field name = "wind_load">10.0</field>
+			<field name = "tilt_angle">45.0</field>
+			<field name = "installation_type">roof</field>
+			<field name = "product_tmpl_id" ref = "export_product_tmpl_56_product_template" />
+		</record>
+
+		<record id="export_product_tmpl_42" model="product.product">
 			<field name = "name">trina_solutions_1</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Trina Solutions 1</field>
@@ -17,7 +113,7 @@
 			<field name = "material">AL6005-T5</field>
 			<field name = "wind_load">10.0</field>
 		</record>
-		<record id="export_bom_12" model="mrp.bom">
+		<record id="export_bom_9" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -34,10 +130,10 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_45_product_template" />
+			<field name = "product_tmpl_id" ref = "export_product_tmpl_42_product_template" />
 		</record>
 
-		<record id="export_product_product_54" model="product.product">
+		<record id="export_product_product_51" model="product.product">
 			<field name = "name">SPC_CS_CR</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Carport Rail</field>
@@ -57,11 +153,11 @@
 		<record id="export_bom_line_18" model="mrp.bom.line">
 			<field name = "product_qty">18.0</field>
 			<field name = "sequence">10</field>
-			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "export_product_product_54" />
+			<field name = "bom_id" ref = "export_bom_9" />
+			<field name = "product_id" ref = "export_product_product_51" />
 		</record>
 
-		<record id="export_product_product_55" model="product.product">
+		<record id="export_product_product_52" model="product.product">
 			<field name = "name">SPC-CS-MB</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Main Beam</field>
@@ -81,11 +177,11 @@
 		<record id="export_bom_line_19" model="mrp.bom.line">
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">20</field>
-			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "export_product_product_55" />
+			<field name = "bom_id" ref = "export_bom_9" />
+			<field name = "product_id" ref = "export_product_product_52" />
 		</record>
 
-		<record id="export_product_product_56" model="product.product">
+		<record id="export_product_product_53" model="product.product">
 			<field name = "name">SPC-CS-IS</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Inclined Support(2358,3165,3005,3501)</field>
@@ -105,11 +201,11 @@
 		<record id="export_bom_line_20" model="mrp.bom.line">
 			<field name = "product_qty">16.0</field>
 			<field name = "sequence">30</field>
-			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "export_product_product_56" />
+			<field name = "bom_id" ref = "export_bom_9" />
+			<field name = "product_id" ref = "export_product_product_53" />
 		</record>
 
-		<record id="export_product_product_57" model="product.product">
+		<record id="export_product_product_54" model="product.product">
 			<field name = "name">SPC-CS-BB-02</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Bottom Base 02#</field>
@@ -129,11 +225,11 @@
 		<record id="export_bom_line_21" model="mrp.bom.line">
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">40</field>
-			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "export_product_product_57" />
+			<field name = "bom_id" ref = "export_bom_9" />
+			<field name = "product_id" ref = "export_product_product_54" />
 		</record>
 
-		<record id="export_product_product_58" model="product.product">
+		<record id="export_product_product_55" model="product.product">
 			<field name = "name">SPC-CS-BC-01</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Beam Connect Kit 01#</field>
@@ -153,11 +249,11 @@
 		<record id="export_bom_line_22" model="mrp.bom.line">
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">50</field>
-			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "export_product_product_58" />
+			<field name = "bom_id" ref = "export_bom_9" />
+			<field name = "product_id" ref = "export_product_product_55" />
 		</record>
 
-		<record id="export_product_product_59" model="product.product">
+		<record id="export_product_product_56" model="product.product">
 			<field name = "name">SPC-CS-BC-02</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Beam Connect Kit 02#</field>
@@ -177,11 +273,11 @@
 		<record id="export_bom_line_23" model="mrp.bom.line">
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">60</field>
-			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "export_product_product_59" />
+			<field name = "bom_id" ref = "export_bom_9" />
+			<field name = "product_id" ref = "export_product_product_56" />
 		</record>
 
-		<record id="export_product_product_60" model="product.product">
+		<record id="export_product_product_57" model="product.product">
 			<field name = "name">SPC-CS-CRS</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Carport Rail Splice Kit</field>
@@ -201,11 +297,11 @@
 		<record id="export_bom_line_24" model="mrp.bom.line">
 			<field name = "product_qty">12.0</field>
 			<field name = "sequence">70</field>
-			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "export_product_product_60" />
+			<field name = "bom_id" ref = "export_bom_9" />
+			<field name = "product_id" ref = "export_product_product_57" />
 		</record>
 
-		<record id="export_product_product_61" model="product.product">
+		<record id="export_product_product_58" model="product.product">
 			<field name = "name">SPC-CS-GRC-50</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Rail Fasten Clip</field>
@@ -225,11 +321,11 @@
 		<record id="export_bom_line_25" model="mrp.bom.line">
 			<field name = "product_qty">96.0</field>
 			<field name = "sequence">80</field>
-			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "export_product_product_61" />
+			<field name = "bom_id" ref = "export_bom_9" />
+			<field name = "product_id" ref = "export_product_product_58" />
 		</record>
 
-		<record id="export_product_product_62" model="product.product">
+		<record id="export_product_product_59" model="product.product">
 			<field name = "name">SPC-MC-C-L35</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Mid Clamp</field>
@@ -249,11 +345,11 @@
 		<record id="export_bom_line_26" model="mrp.bom.line">
 			<field name = "product_qty">80.0</field>
 			<field name = "sequence">90</field>
-			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "export_product_product_62" />
+			<field name = "bom_id" ref = "export_bom_9" />
+			<field name = "product_id" ref = "export_product_product_59" />
 		</record>
 
-		<record id="export_product_product_63" model="product.product">
+		<record id="export_product_product_60" model="product.product">
 			<field name = "name">SPC-EC-C-L35</field>
 			<field name = "sequence">1</field>
 			<field name = "description">End Clamp</field>
@@ -273,11 +369,18 @@
 		<record id="export_bom_line_27" model="mrp.bom.line">
 			<field name = "product_qty">40.0</field>
 			<field name = "sequence">100</field>
-			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "export_product_product_63" />
+			<field name = "bom_id" ref = "export_bom_9" />
+			<field name = "product_id" ref = "export_product_product_60" />
 		</record>
 
-		<record id="export_product_tmpl_56" model="product.product">
+		<record id="export_bom_line_38" model="mrp.bom.line">
+			<field name = "product_qty">1.0</field>
+			<field name = "sequence">1</field>
+			<field name = "bom_id" ref = "export_bom_13" />
+			<field name = "product_id" ref = "export_product_tmpl_42" />
+		</record>
+
+		<record id="export_product_tmpl_53" model="product.product">
 			<field name = "name">trina carport solution</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Trina Solutions 1</field>
@@ -291,7 +394,7 @@
 			<field name = "material">AL6005-T5</field>
 			<field name = "wind_load">10.0</field>
 		</record>
-		<record id="export_bom_13" model="mrp.bom">
+		<record id="export_bom_10" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -308,10 +411,10 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_56_product_template" />
+			<field name = "product_tmpl_id" ref = "export_product_tmpl_53_product_template" />
 		</record>
 
-		<record id="export_product_product_54" model="product.product">
+		<record id="export_product_product_51" model="product.product">
 			<field name = "name">SPC_CS_CR</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Carport Rail</field>
@@ -328,14 +431,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_29" model="mrp.bom.line">
+		<record id="export_bom_line_28" model="mrp.bom.line">
 			<field name = "product_qty">36.0</field>
 			<field name = "sequence">10</field>
-			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "export_product_product_54" />
+			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "product_id" ref = "export_product_product_51" />
 		</record>
 
-		<record id="export_product_product_55" model="product.product">
+		<record id="export_product_product_52" model="product.product">
 			<field name = "name">SPC-CS-MB</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Main Beam</field>
@@ -352,14 +455,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_30" model="mrp.bom.line">
+		<record id="export_bom_line_29" model="mrp.bom.line">
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">20</field>
-			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "export_product_product_55" />
+			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "product_id" ref = "export_product_product_52" />
 		</record>
 
-		<record id="export_product_product_56" model="product.product">
+		<record id="export_product_product_53" model="product.product">
 			<field name = "name">SPC-CS-IS</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Inclined Support(2358,3165,3005,3501)</field>
@@ -376,14 +479,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_31" model="mrp.bom.line">
+		<record id="export_bom_line_30" model="mrp.bom.line">
 			<field name = "product_qty">32.0</field>
 			<field name = "sequence">30</field>
-			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "export_product_product_56" />
+			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "product_id" ref = "export_product_product_53" />
 		</record>
 
-		<record id="export_product_product_57" model="product.product">
+		<record id="export_product_product_54" model="product.product">
 			<field name = "name">SPC-CS-BB-02</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Bottom Base 02#</field>
@@ -400,14 +503,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_32" model="mrp.bom.line">
+		<record id="export_bom_line_31" model="mrp.bom.line">
 			<field name = "product_qty">16.0</field>
 			<field name = "sequence">40</field>
-			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "export_product_product_57" />
+			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "product_id" ref = "export_product_product_54" />
 		</record>
 
-		<record id="export_product_product_58" model="product.product">
+		<record id="export_product_product_55" model="product.product">
 			<field name = "name">SPC-CS-BC-01</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Beam Connect Kit 01#</field>
@@ -424,14 +527,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_33" model="mrp.bom.line">
+		<record id="export_bom_line_32" model="mrp.bom.line">
 			<field name = "product_qty">16.0</field>
 			<field name = "sequence">50</field>
-			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "export_product_product_58" />
+			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "product_id" ref = "export_product_product_55" />
 		</record>
 
-		<record id="export_product_product_59" model="product.product">
+		<record id="export_product_product_56" model="product.product">
 			<field name = "name">SPC-CS-BC-02</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Beam Connect Kit 02#</field>
@@ -448,14 +551,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_34" model="mrp.bom.line">
+		<record id="export_bom_line_33" model="mrp.bom.line">
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">60</field>
-			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "export_product_product_59" />
+			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "product_id" ref = "export_product_product_56" />
 		</record>
 
-		<record id="export_product_product_60" model="product.product">
+		<record id="export_product_product_57" model="product.product">
 			<field name = "name">SPC-CS-CRS</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Carport Rail Splice Kit</field>
@@ -472,14 +575,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_35" model="mrp.bom.line">
+		<record id="export_bom_line_34" model="mrp.bom.line">
 			<field name = "product_qty">24.0</field>
 			<field name = "sequence">70</field>
-			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "export_product_product_60" />
+			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "product_id" ref = "export_product_product_57" />
 		</record>
 
-		<record id="export_product_product_61" model="product.product">
+		<record id="export_product_product_58" model="product.product">
 			<field name = "name">SPC-CS-GRC-50</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Rail Fasten Clip</field>
@@ -496,14 +599,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_36" model="mrp.bom.line">
+		<record id="export_bom_line_35" model="mrp.bom.line">
 			<field name = "product_qty">192.0</field>
 			<field name = "sequence">80</field>
-			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "export_product_product_61" />
+			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "product_id" ref = "export_product_product_58" />
 		</record>
 
-		<record id="export_product_product_62" model="product.product">
+		<record id="export_product_product_59" model="product.product">
 			<field name = "name">SPC-MC-C-L35</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Mid Clamp</field>
@@ -520,14 +623,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_37" model="mrp.bom.line">
+		<record id="export_bom_line_36" model="mrp.bom.line">
 			<field name = "product_qty">160.0</field>
 			<field name = "sequence">90</field>
-			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "export_product_product_62" />
+			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "product_id" ref = "export_product_product_59" />
 		</record>
 
-		<record id="export_product_product_63" model="product.product">
+		<record id="export_product_product_60" model="product.product">
 			<field name = "name">SPC-EC-C-L35</field>
 			<field name = "sequence">1</field>
 			<field name = "description">End Clamp</field>
@@ -544,128 +647,25 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_38" model="mrp.bom.line">
+		<record id="export_bom_line_37" model="mrp.bom.line">
 			<field name = "product_qty">80.0</field>
 			<field name = "sequence">100</field>
-			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "export_product_product_63" />
-		</record>
-
-		<record id="export_product_tmpl_42" model="product.product">
-			<field name = "name">Trina Grand Grand</field>
-			<field name = "sequence">1</field>
-			<field name = "detailed_type">product</field>
-			<field name = "list_price">1.0</field>
-			<field name = "sale_ok">True</field>
-			<field name = "purchase_ok">True</field>
-			<field name = "active">True</field>
-			<field name = "priority">0</field>
-			<field name = "length">1.0</field>
-			<field name = "material">AL6005-T5</field>
-			<field name = "wind_load">10.0</field>
-		</record>
-		<record id="export_bom_9" model="mrp.bom">
-			<field name = "active">True</field>
-			<field name = "type">normal</field>
-			<field name = "product_qty">1.0</field>
-			<field name = "ready_to_produce">all_available</field>
-			<field name = "consumption">warning</field>
-			<field name = "number_of_panels">248</field>
-			<field name = "panel_length">2102.0</field>
-			<field name = "panel_width">1040.0</field>
-			<field name = "panel_power">400.0</field>
-			<field name = "panel_spacing">1090.0</field>
-			<field name = "channel_length">4400.0</field>
-			<field name = "number_of_isolators">5</field>
-			<field name = "wind_load">10.0</field>
-			<field name = "tilt_angle">45.0</field>
-			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_42_product_template" />
-		</record>
-
-		<record id="export_product_tmpl_43" model="product.product">
-			<field name = "name">Trina Grand</field>
-			<field name = "sequence">1</field>
-			<field name = "detailed_type">product</field>
-			<field name = "list_price">1.0</field>
-			<field name = "sale_ok">True</field>
-			<field name = "purchase_ok">True</field>
-			<field name = "active">True</field>
-			<field name = "priority">0</field>
-			<field name = "length">1.0</field>
-			<field name = "material">AL6005-T5</field>
-			<field name = "wind_load">10.0</field>
-		</record>
-		<record id="export_bom_10" model="mrp.bom">
-			<field name = "active">True</field>
-			<field name = "type">normal</field>
-			<field name = "product_qty">1.0</field>
-			<field name = "ready_to_produce">all_available</field>
-			<field name = "consumption">warning</field>
-			<field name = "number_of_panels">248</field>
-			<field name = "panel_length">2102.0</field>
-			<field name = "panel_width">1040.0</field>
-			<field name = "panel_power">400.0</field>
-			<field name = "panel_spacing">1090.0</field>
-			<field name = "channel_length">4400.0</field>
-			<field name = "number_of_isolators">5</field>
-			<field name = "wind_load">10.0</field>
-			<field name = "tilt_angle">45.0</field>
-			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_43_product_template" />
-		</record>
-
-		<record id="export_product_tmpl_44" model="product.product">
-			<field name = "name">Trina total solution</field>
-			<field name = "sequence">1</field>
-			<field name = "detailed_type">product</field>
-			<field name = "list_price">1.0</field>
-			<field name = "sale_ok">True</field>
-			<field name = "purchase_ok">True</field>
-			<field name = "active">True</field>
-			<field name = "priority">0</field>
-			<field name = "length">1.0</field>
-			<field name = "material">AL6005-T5</field>
-			<field name = "wind_load">10.0</field>
-		</record>
-		<record id="export_bom_11" model="mrp.bom">
-			<field name = "active">True</field>
-			<field name = "type">normal</field>
-			<field name = "product_qty">1.0</field>
-			<field name = "ready_to_produce">all_available</field>
-			<field name = "consumption">warning</field>
-			<field name = "number_of_panels">248</field>
-			<field name = "panel_length">2102.0</field>
-			<field name = "panel_width">1040.0</field>
-			<field name = "panel_power">400.0</field>
-			<field name = "panel_spacing">1090.0</field>
-			<field name = "channel_length">4400.0</field>
-			<field name = "number_of_isolators">5</field>
-			<field name = "wind_load">10.0</field>
-			<field name = "tilt_angle">45.0</field>
-			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_44_product_template" />
-		</record>
-
-		<record id="export_bom_line_28" model="mrp.bom.line">
-			<field name = "product_qty">1.0</field>
-			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_11" />
-			<field name = "product_id" ref = "export_product_tmpl_45" />
+			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "product_id" ref = "export_product_product_60" />
 		</record>
 
 		<record id="export_bom_line_39" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_11" />
-			<field name = "product_id" ref = "export_product_tmpl_56" />
+			<field name = "bom_id" ref = "export_bom_13" />
+			<field name = "product_id" ref = "export_product_tmpl_53" />
 		</record>
 
 		<record id="export_bom_line_40" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_10" />
-			<field name = "product_id" ref = "export_product_tmpl_44" />
+			<field name = "bom_id" ref = "export_bom_12" />
+			<field name = "product_id" ref = "export_product_tmpl_56" />
 		</record>
 
 		<record id="export_product_tmpl_57" model="product.product">
@@ -704,28 +704,28 @@
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
 			<field name = "bom_id" ref = "export_bom_14" />
-			<field name = "product_id" ref = "export_product_tmpl_45" />
+			<field name = "product_id" ref = "export_product_tmpl_42" />
 		</record>
 
 		<record id="export_bom_line_42" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
 			<field name = "bom_id" ref = "export_bom_14" />
-			<field name = "product_id" ref = "export_product_tmpl_56" />
+			<field name = "product_id" ref = "export_product_tmpl_53" />
 		</record>
 
 		<record id="export_bom_line_43" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "bom_id" ref = "export_bom_12" />
 			<field name = "product_id" ref = "export_product_tmpl_57" />
 		</record>
 
-		<record id="export_bom_line_44" model="mrp.bom.line">
+		<record id="export_bom_line_48" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_9" />
-			<field name = "product_id" ref = "export_product_tmpl_43" />
+			<field name = "bom_id" ref = "export_bom_16" />
+			<field name = "product_id" ref = "export_product_tmpl_55" />
 		</record>
 
 		<record id="export_product_tmpl_58" model="product.product">
@@ -764,7 +764,7 @@
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
 			<field name = "bom_id" ref = "export_bom_15" />
-			<field name = "product_id" ref = "export_product_tmpl_44" />
+			<field name = "product_id" ref = "export_product_tmpl_56" />
 		</record>
 
 		<record id="export_bom_line_46" model="mrp.bom.line">
@@ -774,11 +774,195 @@
 			<field name = "product_id" ref = "export_product_tmpl_57" />
 		</record>
 
+		<record id="export_bom_line_49" model="mrp.bom.line">
+			<field name = "product_qty">1.0</field>
+			<field name = "sequence">1</field>
+			<field name = "bom_id" ref = "export_bom_16" />
+			<field name = "product_id" ref = "export_product_tmpl_58" />
+		</record>
+
+		<record id="export_product_tmpl_61" model="product.product">
+			<field name = "name">Trina Grand 3 (copy)</field>
+			<field name = "sequence">1</field>
+			<field name = "detailed_type">product</field>
+			<field name = "list_price">1.0</field>
+			<field name = "sale_ok">True</field>
+			<field name = "purchase_ok">True</field>
+			<field name = "active">True</field>
+			<field name = "priority">0</field>
+			<field name = "length">1.0</field>
+			<field name = "material">AL6005-T5</field>
+			<field name = "wind_load">10.0</field>
+		</record>
+		<record id="export_bom_18" model="mrp.bom">
+			<field name = "active">True</field>
+			<field name = "type">normal</field>
+			<field name = "product_qty">1.0</field>
+			<field name = "ready_to_produce">all_available</field>
+			<field name = "consumption">warning</field>
+			<field name = "number_of_panels">248</field>
+			<field name = "panel_length">2102.0</field>
+			<field name = "panel_width">1040.0</field>
+			<field name = "panel_power">400.0</field>
+			<field name = "panel_spacing">1090.0</field>
+			<field name = "channel_length">4400.0</field>
+			<field name = "number_of_isolators">5</field>
+			<field name = "wind_load">10.0</field>
+			<field name = "tilt_angle">45.0</field>
+			<field name = "installation_type">roof</field>
+			<field name = "product_tmpl_id" ref = "export_product_tmpl_61_product_template" />
+		</record>
+
+		<record id="export_product_tmpl_54" model="product.product">
+			<field name = "name">Trina Grand Grand</field>
+			<field name = "sequence">1</field>
+			<field name = "detailed_type">product</field>
+			<field name = "list_price">1.0</field>
+			<field name = "sale_ok">True</field>
+			<field name = "purchase_ok">True</field>
+			<field name = "active">True</field>
+			<field name = "priority">0</field>
+			<field name = "length">1.0</field>
+			<field name = "material">AL6005-T5</field>
+			<field name = "wind_load">10.0</field>
+		</record>
+		<record id="export_bom_11" model="mrp.bom">
+			<field name = "active">True</field>
+			<field name = "type">normal</field>
+			<field name = "product_qty">1.0</field>
+			<field name = "ready_to_produce">all_available</field>
+			<field name = "consumption">warning</field>
+			<field name = "number_of_panels">248</field>
+			<field name = "panel_length">2102.0</field>
+			<field name = "panel_width">1040.0</field>
+			<field name = "panel_power">400.0</field>
+			<field name = "panel_spacing">1090.0</field>
+			<field name = "channel_length">4400.0</field>
+			<field name = "number_of_isolators">5</field>
+			<field name = "wind_load">10.0</field>
+			<field name = "tilt_angle">45.0</field>
+			<field name = "installation_type">roof</field>
+			<field name = "product_tmpl_id" ref = "export_product_tmpl_54_product_template" />
+		</record>
+
+		<record id="export_bom_line_44" model="mrp.bom.line">
+			<field name = "product_qty">1.0</field>
+			<field name = "sequence">1</field>
+			<field name = "bom_id" ref = "export_bom_11" />
+			<field name = "product_id" ref = "export_product_tmpl_55" />
+		</record>
+
 		<record id="export_bom_line_47" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_9" />
+			<field name = "bom_id" ref = "export_bom_11" />
 			<field name = "product_id" ref = "export_product_tmpl_58" />
+		</record>
+
+		<record id="export_bom_line_52" model="mrp.bom.line">
+			<field name = "product_qty">1.0</field>
+			<field name = "sequence">1</field>
+			<field name = "bom_id" ref = "export_bom_18" />
+			<field name = "product_id" ref = "export_product_tmpl_54" />
+		</record>
+
+		<record id="export_bom_line_53" model="mrp.bom.line">
+			<field name = "product_qty">1.0</field>
+			<field name = "sequence">1</field>
+			<field name = "bom_id" ref = "export_bom_18" />
+			<field name = "product_id" ref = "export_product_tmpl_59" />
+		</record>
+
+		<record id="export_product_tmpl_60" model="product.product">
+			<field name = "name">Trina Grand 3</field>
+			<field name = "sequence">1</field>
+			<field name = "detailed_type">product</field>
+			<field name = "list_price">1.0</field>
+			<field name = "sale_ok">True</field>
+			<field name = "purchase_ok">True</field>
+			<field name = "active">True</field>
+			<field name = "priority">0</field>
+			<field name = "length">1.0</field>
+			<field name = "material">AL6005-T5</field>
+			<field name = "wind_load">10.0</field>
+		</record>
+		<record id="export_bom_17" model="mrp.bom">
+			<field name = "active">True</field>
+			<field name = "type">normal</field>
+			<field name = "product_qty">1.0</field>
+			<field name = "ready_to_produce">all_available</field>
+			<field name = "consumption">warning</field>
+			<field name = "number_of_panels">248</field>
+			<field name = "panel_length">2102.0</field>
+			<field name = "panel_width">1040.0</field>
+			<field name = "panel_power">400.0</field>
+			<field name = "panel_spacing">1090.0</field>
+			<field name = "channel_length">4400.0</field>
+			<field name = "number_of_isolators">5</field>
+			<field name = "wind_load">10.0</field>
+			<field name = "tilt_angle">45.0</field>
+			<field name = "installation_type">roof</field>
+			<field name = "product_tmpl_id" ref = "export_product_tmpl_60_product_template" />
+		</record>
+
+		<record id="export_bom_line_50" model="mrp.bom.line">
+			<field name = "product_qty">1.0</field>
+			<field name = "sequence">1</field>
+			<field name = "bom_id" ref = "export_bom_17" />
+			<field name = "product_id" ref = "export_product_tmpl_54" />
+		</record>
+
+		<record id="export_bom_line_51" model="mrp.bom.line">
+			<field name = "product_qty">1.0</field>
+			<field name = "sequence">1</field>
+			<field name = "bom_id" ref = "export_bom_17" />
+			<field name = "product_id" ref = "export_product_tmpl_59" />
+		</record>
+
+		<record id="export_product_tmpl_62" model="product.product">
+			<field name = "name">Trina Grand 4</field>
+			<field name = "sequence">1</field>
+			<field name = "detailed_type">product</field>
+			<field name = "list_price">1.0</field>
+			<field name = "sale_ok">True</field>
+			<field name = "purchase_ok">True</field>
+			<field name = "active">True</field>
+			<field name = "priority">0</field>
+			<field name = "length">1.0</field>
+			<field name = "material">AL6005-T5</field>
+			<field name = "wind_load">10.0</field>
+		</record>
+		<record id="export_bom_19" model="mrp.bom">
+			<field name = "active">True</field>
+			<field name = "type">normal</field>
+			<field name = "product_qty">1.0</field>
+			<field name = "ready_to_produce">all_available</field>
+			<field name = "consumption">warning</field>
+			<field name = "number_of_panels">248</field>
+			<field name = "panel_length">2102.0</field>
+			<field name = "panel_width">1040.0</field>
+			<field name = "panel_power">400.0</field>
+			<field name = "panel_spacing">1090.0</field>
+			<field name = "channel_length">4400.0</field>
+			<field name = "number_of_isolators">5</field>
+			<field name = "wind_load">10.0</field>
+			<field name = "tilt_angle">45.0</field>
+			<field name = "installation_type">roof</field>
+			<field name = "product_tmpl_id" ref = "export_product_tmpl_62_product_template" />
+		</record>
+
+		<record id="export_bom_line_54" model="mrp.bom.line">
+			<field name = "product_qty">1.0</field>
+			<field name = "sequence">1</field>
+			<field name = "bom_id" ref = "export_bom_19" />
+			<field name = "product_id" ref = "export_product_tmpl_60" />
+		</record>
+
+		<record id="export_bom_line_55" model="mrp.bom.line">
+			<field name = "product_qty">1.0</field>
+			<field name = "sequence">1</field>
+			<field name = "bom_id" ref = "export_bom_19" />
+			<field name = "product_id" ref = "export_product_tmpl_61" />
 		</record>
 
 

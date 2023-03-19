@@ -1,6 +1,8 @@
 #from odoo.addons.mrp.report.mrp_report_bom_structure import ReportBomStructure
 from odoo import fields, _
 from odoo import api
+from odoo.exceptions import ValidationError
+
 import logging
 
 from odoo.addons.quotation.utils.bom_aggregate import BomAggregate
@@ -128,6 +130,24 @@ class TrinaBom(BomAggregate):
     )
 
 
+    @api.constrains('wind_load')
+    def _check_wind_load(self):
+        for record in self:
+            aggregate = self._get_report_data(record)['lines']['aggregate']
+            for t in aggregate:
+                if (record.product_tmpl_id.id == t['id']):
+                    continue
+                template = self.env[t['model']].search([('id', '=', t['id'])])
+                #_logger.info('template: %s, record: %s', template.id, record.product_tmpl_id.id)
+                if template.is_product_variant:
+                    products = [template]
+                else:
+                    products = template.product_variant_ids
+                for product in products:
+                    if record.wind_load > product.wind_load:
+                        raise ValidationError("Component %s\'s wind load does not meet requirements." % (product.display_name))
+        # all records passed the test, don't return anything
+
     def _get_report_data(self, record):
         #if record not in self._dico:
         self._dico[record] = super()._get_report_data(record.id)
@@ -136,8 +156,6 @@ class TrinaBom(BomAggregate):
     def _print_template(self, t):
         template = self.env[t['model']].search([('id', '=', t['id'])])
         #_logger.info('template: %s', template.display_name)
-        if not template:
-            return ''
         if template.is_product_variant:
             products = [template]
         else:
