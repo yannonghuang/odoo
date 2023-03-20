@@ -6353,3 +6353,174 @@ msgstr "拆分"
 msgid "work orders"
 msgstr "工单"
 
+#. module: quotation
+#: model_terms:product.template,description:quotation.trina_component_SPC_CS_BC_01_product_template
+msgid "Beam Connect Kit 01#"
+msgstr "一号主杆连接件"
+
+#. module: quotation
+#: model_terms:product.template,description:quotation.trina_component_SPC_CS_BC_02_product_template
+msgid "Beam Connect Kit 02#"
+msgstr "一号主杆连接件"
+
+#. module: quotation
+#: model:ir.ui.menu,name:quotation.menu_mrp_bom_form_action
+msgid "Bills of Materials"
+msgstr "物料清单"
+
+#. module: quotation
+#: model_terms:product.template,description:quotation.trina_component_SPC_CS_BB_02_product_template
+msgid "Bottom Base 02#"
+msgstr "二号底基"
+
+#. module: quotation
+#: model_terms:product.template,description:quotation.trina_component_SPC_CS_CR_product_template
+msgid "Carport Rail"
+msgstr "车棚轨道"
+
+#. module: quotation
+#: model_terms:product.template,description:quotation.trina_component_SPC_CS_CRS_product_template
+msgid "Carport Rail Splice Kit"
+msgstr "车棚轨道连接件"
+
+#. module: quotation
+#. odoo-python
+#: code:addons/quotation/models/bom.py:0 code:addons/quotation/models/bom.py:0
+#: model:ir.model.fields,field_description:quotation.field_mrp_bom__channel_length
+#: model:ir.model.fields,help:quotation.field_mrp_bom__channel_length
+#, python-format
+msgid "Channel Length"
+msgstr "通道长度"
+
+#. module: quotation
+#: model_terms:product.template,description:quotation.trina_component_SPC_EC_C_L35_product_template
+msgid "End Clamp"
+msgstr "末端夹子"
+
+#. module: quotation
+#: model:ir.actions.report,name:quotation.export_bom_xml_report
+#: model:ir.model,name:quotation.model_report_export_bom_xml_export_bom_xml
+msgid "Export BOM to XML"
+msgstr "导出BOM到XML文本"
+
+#. module: quotation
+#: model:ir.model.fields.selection,name:quotation.selection__mrp_bom__installation_type__ground
+msgid "Ground Based"
+msgstr "地面模式"
+
+#. module: quotation
+#: model_terms:product.template,description:quotation.trina_component_SPC_CS_IS_product_template
+msgid "Inclined Support(2358,3165,3005,3501)"
+msgstr "斜撑(2358,3165,3005,3501)"
+
+#. module: quotation
+#: model:ir.model.fields,field_description:quotation.field_mrp_bom__installation_type
+msgid "Installation Type"
+msgstr "安装模式"
+
+#. module: quotation
+#: model_terms:product.template,description:quotation.trina_component_SPC_CS_MB_product_template
+msgid "Main Beam"
+msgstr "主杆"
+
+#. module: quotation
+#: model_terms:product.template,description:quotation.trina_component_SPC_MC_C_L35_product_template
+msgid "Mid Clamp"
+msgstr "中间夹子"
+
+
+#. module: quotation
+#. odoo-python
+#: code:addons/quotation/models/bom.py:0 code:addons/quotation/models/bom.py:0
+#: model:ir.model.fields,field_description:quotation.field_mrp_bom__number_of_components
+#: model:ir.model.fields,help:quotation.field_mrp_bom__number_of_components
+#, python-format
+msgid "Number of Components"
+msgstr "组建数目"
+
+#. module: quotation
+#. odoo-python
+#: code:addons/quotation/models/bom.py:0 code:addons/quotation/models/bom.py:0
+#: model:ir.model.fields,field_description:quotation.field_mrp_bom__number_of_isolators
+#: model:ir.model.fields,help:quotation.field_mrp_bom__number_of_isolators
+#, python-format
+msgid "Number of Isolators"
+msgstr "分离器数目"
+
+#. module: quotation
+#. odoo-python
+#: code:addons/quotation/models/bom.py:0 code:addons/quotation/models/bom.py:0
+#: model:ir.model.fields,field_description:quotation.field_mrp_bom__number_of_panels
+#: model:ir.model.fields,help:quotation.field_mrp_bom__number_of_panels
+#, python-format
+msgid "Number of Panels"
+msgstr "太阳能板数目"
+
+#. module: quotation
+#. odoo-javascript
+#: code:addons/quotation/static/src/components/bom_overview_display_filter/mrp_bom_overview_display_filter.js:0
+#: code:addons/quotation/static/src/components/bom_overview_special_line/mrp_bom_overview_special_line.xml:0
+#, python-format
+msgid "Operations"
+msgstr ""
+
+#. module: quotation
+#. odoo-python
+#: code:addons/quotation/models/bom.py:0 code:addons/quotation/models/bom.py:0
+#: model:ir.model.fields,field_description:quotation.field_mrp_bom__panel_length
+#: model:ir.model.fields,help:quotation.field_mrp_bom__panel_length
+#, python-format
+msgid "Panel Length"
+msgstr "太阳能板长度"
+
+#. module: quotation
+#. odoo-python
+#: code:addons/quotation/models/bom.py:0 code:addons/quotation/models/bom.py:0
+#: model:ir.model.fields,field_description:quotation.field_mrp_bom__panel_power
+#: model:ir.model.fields,help:quotation.field_mrp_bom__panel_power
+#, python-format
+msgid "Panel Power"
+msgstr "太阳能板功率"
+
+#. module: quotation
+#. odoo-python
+#: code:addons/quotation/models/bom.py:0 code:addons/quotation/models/bom.py:0
+#: model:ir.model.fields,field_description:quotation.field_mrp_bom__panel_spacing
+#: model:ir.model.fields,help:quotation.field_mrp_bom__panel_spacing
+#, python-format
+msgid "Panel Spacing"
+msgstr "太阳能板间距"
+
+#. module: quotation
+#. odoo-python
+#: code:addons/quotation/models/bom.py:0 code:addons/quotation/models/bom.py:0
+#: model:ir.model.fields,field_description:quotation.field_mrp_bom__panel_width
+#: model:ir.model.fields,help:quotation.field_mrp_bom__panel_width
+#, python-format
+msgid "Panel Width"
+msgstr "太阳能板宽度"
+
+#. module: quotation
+#: model:ir.model.fields.selection,name:quotation.selection__mrp_bom__installation_type__roof
+msgid "Roof Top"
+msgstr "房顶"
+
+#. module: quotation
+#. odoo-python
+#: code:addons/quotation/models/bom.py:0 code:addons/quotation/models/bom.py:0
+#: code:addons/quotation/models/product.py:0
+#: code:addons/quotation/models/product.py:0
+#: model:ir.model.fields,field_description:quotation.field_mrp_bom__wind_load
+#: model:ir.model.fields,field_description:quotation.field_product_product__wind_load
+#: model:ir.model.fields,field_description:quotation.field_product_template__wind_load
+#: model:ir.model.fields,help:quotation.field_mrp_bom__wind_load
+#: model:ir.model.fields,help:quotation.field_product_product__wind_load
+#: model:ir.model.fields,help:quotation.field_product_template__wind_load
+#, python-format
+msgid "Wind Load"
+msgstr "风荷载"
+
+#. module: quotation
+#: model:ir.ui.menu,name:quotation.menu_trina_root
+msgid "Trina"
+msgstr "天河光能"

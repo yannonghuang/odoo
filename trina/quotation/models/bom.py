@@ -99,6 +99,12 @@ class TrinaBom(BomAggregate):
             return self.env.ref('uom.product_uom_millimeter')
 
 
+    number_of_components = fields.Integer(
+        _("Number of Components"), default=False,
+        compute='_compute_number_of_components',
+        help=_("Number of Components")
+    )
+
     bom_cost = fields.Float(
         _("BoM Cost"), default=False,
         compute='_compute_bom_cost',
@@ -202,6 +208,12 @@ class TrinaBom(BomAggregate):
     def _compute_bom_cost_store(self):
         for record in self:
             record.bom_cost_store = record.bom_cost
+
+    def _compute_number_of_components(self):
+        for record in self:
+            report_data = self._get_report_data(record)
+            record.number_of_components = len(report_data['lines']['aggregate'])
+
     def _search_bom_cost(self, operator, value):
         if operator == '>':
             ids = self.env['mrp.bom'].search([]).filtered(

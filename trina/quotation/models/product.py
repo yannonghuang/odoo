@@ -50,10 +50,13 @@ class TrinaProduct(models.Model):
     def _compute_length_uom_name(self):
         self.length_uom_name = self._get_length_uom_name_from_ir_config_parameter()
 
-    @api.depends('bom_ids.bom_cost')
+    @api.depends('bom_ids.bom_cost', 'standard_price')
     def _compute_bom_cost(self):
         for record in self:
-            record.bom_cost = self.bom_ids[0].bom_cost
+            try:
+                record.bom_cost = record.bom_ids[0].bom_cost
+            except:
+                record.bom_cost = record.standard_price
 
     def _search_bom_cost(self, operator, value):
         _logger.info('ProductTemplate._search_bom_cost: %s %s', operator, value)

@@ -21,6 +21,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//div[@class='o_row']" position="after">
                     <field name="bom_cost"/>
+                    <field name="number_of_components"/>
                 </xpath>
                 <xpath expr="//page[@name='components']" position="before">
                     <page string="Metrics" name="metrics" >
