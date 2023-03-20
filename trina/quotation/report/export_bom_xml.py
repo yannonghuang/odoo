@@ -33,7 +33,7 @@ class ExportBomXML(models.AbstractModel):
         return re.sub(cleaner, '', text)
 
     def _skip_field(self, f):
-        if f.name in ('standard_price', 'default_code'):
+        if f.name in ('standard_price', 'default_code', 'name'):
             return False
         return f.type in ('binary', 'image', 'many2one', 'many2many', 'one2many', 'reference') or f.compute or not f.is_editable()
 
@@ -60,6 +60,11 @@ class ExportBomXML(models.AbstractModel):
                 result += ' name = \"' + fname + '\" ref = \"' + ref + '\" />\n'
         return result
 
+    def _export_routing_id(self, operation):
+        return 'export_routing_' + str(operation.id)
+
+    def _export_workcenter_id(self, workcenter):
+        return 'export_workcenter_' + str(workcenter.id)
     def _export_product_tmpl_id(self, bom):
         return 'export_product_tmpl_' + str(bom.product_tmpl_id.id)
 
@@ -71,6 +76,33 @@ class ExportBomXML(models.AbstractModel):
 
     def _export_product_product_id(self, bom_line):
         return 'export_product_product_' + str(bom_line.product_id.id)
+
+    def _print_routing_workcenter(self, bom):
+        result = ''
+        for operation in bom.operation_ids:
+            routing_id = self._export_routing_id(operation)
+            workcenter = operation.workcenter_id
+            if workcenter:
+                workcenter_id = self._export_workcenter_id(workcenter)
+            else:
+                workcenter_id = None
+            bom_id = self._export_bom_id(bom)
+
+            if workcenter_id:
+                result += '\t\t<record id=\"'
+                result += workcenter_id
+                result += '\" model=\"mrp.workcenter\">\n'
+                result += self._print_fields(workcenter, {"resource_calendar_id": "resource.resource_calendar_std"})
+                result += '\t\t</record>\n\n'
+
+            result += '\t\t<record id=\"'
+            result += routing_id
+            result += '\" model=\"mrp.routing.workcenter\">\n'
+            result += self._print_fields(operation, {"workcenter_id": workcenter_id, "bom_id": bom_id})
+            result += '\t\t</record>\n'
+
+
+        return result
 
     def _print_product_template(self, bom):
         product_tmpl_id = self._export_product_tmpl_id(bom)
@@ -113,6 +145,7 @@ class ExportBomXML(models.AbstractModel):
             return ''
         result = ''
         result += self._print_product_template(bom)
+        result += self._print_routing_workcenter(bom)
         for component_index, line in enumerate(bom.bom_line_ids):
             if line.child_bom_id:
                 result += self._print_bom(line.child_bom_id)
