@@ -101,6 +101,7 @@ class BomAggregate(ReportBomStructure):
             bom_report_line['operations_time'] = sum([op['quantity'] for op in operations])
             bom_report_line['bom_cost'] += bom_report_line['operations_cost']
 
+        lead_time = 0
         components = []
         for component_index, line in enumerate(bom.bom_line_ids):
             new_index = f"{index}{component_index}"
@@ -116,7 +117,10 @@ class BomAggregate(ReportBomStructure):
             components.append(component)
             bom_report_line['bom_cost'] += component['bom_cost']
             bom_report_line['aggregate'] += component['aggregate']
+            if component['lead_time'] > lead_time:
+                lead_time = component['lead_time']
 
+        bom_report_line['lead_time'] += lead_time
         bom_report_line['components'] = components
         bom_report_line['producible_qty'] = self._compute_current_production_capacity(bom_report_line)
 

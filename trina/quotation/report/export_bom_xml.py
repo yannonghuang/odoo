@@ -61,20 +61,30 @@ class ExportBomXML(models.AbstractModel):
         return result
 
     def _export_routing_id(self, operation):
+        #return str(operation.name)
         return 'export_routing_' + str(operation.id)
 
     def _export_workcenter_id(self, workcenter):
+        #return str(workcenter.name)
         return 'export_workcenter_' + str(workcenter.id)
     def _export_product_tmpl_id(self, bom):
+        #return str(bom.product_tmpl_id.name)
         return 'export_product_tmpl_' + str(bom.product_tmpl_id.id)
 
+    def _export_route_id(self, route_id):
+        #return str(route_id.name)
+        return 'export_route_' + str(route_id.id)
+
     def _export_bom_id(self, bom):
+        #return str(bom.display_name)
         return 'export_bom_' + str(bom.id)
 
     def _export_bom_line_id(self, bom_line):
+        #return str(bom_line.display_name)
         return 'export_bom_line_' + str(bom_line.id)
 
     def _export_product_product_id(self, bom_line):
+        #return str(bom_line.product_id.name)
         return 'export_product_product_' + str(bom_line.product_id.id)
 
     def _print_routing_workcenter(self, bom):
@@ -101,15 +111,34 @@ class ExportBomXML(models.AbstractModel):
             result += self._print_fields(operation, {"workcenter_id": workcenter_id, "bom_id": bom_id})
             result += '\t\t</record>\n'
 
-
         return result
 
+    def _print_routes(self, bom):
+        route_ids = bom.product_tmpl_id.route_ids
+        result = ''
+        if route_ids:
+            for route_id in route_ids:
+                result = '\t\t<record id=\"'
+                result += self._export_route_id(route_id)
+                result += '\" model=\"stock.route\">\n'
+                result += '\t\t\t<field name=\"name\">Manufacture2</field>\n'
+                result += '\t\t\t<field name=\"company_id\"></field>\n'
+                result += '\t\t\t<field name=\"sequence\">10</field>\n'
+                result += '\t\t</record>\n'
+        return route_ids, result
+
+
     def _print_product_template(self, bom):
+        route_ids, result = self._print_routes(bom)
         product_tmpl_id = self._export_product_tmpl_id(bom)
         result = '\t\t<record id=\"'
         result += product_tmpl_id
         result += '\" model=\"product.product\">\n'
         result += self._print_fields(bom.product_tmpl_id)
+        if route_ids:
+            result += '\t\t\t<field name = \"route_ids\" eval = \"[(6, 0, [ref(\'mrp.route_warehouse0_manufacture\')])]\" />\n'
+            #result += '\t\t\t<field name = \"route_ids\" eval = \"[(6, 0, [' + ", ".join('ref(\'' + self._export_route_id(route_id) + '\')' for route_id in route_ids) + '])]\" />\n'
+            #result += '\t\t\t<field name = \"route_ids\" eval = \"[(6, 0, [ref(\'' + route_id + '\')])]\" />\n'
         result += '\t\t</record>\n'
 
         result += '\t\t<record id=\"'

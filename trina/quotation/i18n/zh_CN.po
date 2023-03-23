@@ -989,29 +989,45 @@ msgstr "BOM"
 msgid "BoM Components"
 msgstr "BOM组件"
 
-#. module: mrp
-#. odoo-python
+#. module: quotation
 #. odoo-javascript
-#: code:addons/mrp/models/mrp_bom_cost.py:0
-#: code:addons/mrp/models/mrp_bom_cost.py:0
-#: code:addons/mrp/models/product.py:0 code:addons/mrp/models/product.py:0
-#: code:addons/mrp/models/product.py:0 code:addons/mrp/models/product.py:0
-#: code:addons/mrp/static/src/components/bom_overview_table/mrp_bom_overview_table.xml:0
-#: model:ir.model.fields,field_description:mrp.field_mrp_bom__bom_cost
-#: model:ir.model.fields,field_description:mrp.field_product_product__bom_cost
-#: model:ir.model.fields,field_description:mrp.field_product_template__bom_cost
-#: model:ir.model.fields,help:mrp.field_mrp_bom__bom_cost
-#: model:ir.model.fields,help:mrp.field_product_product__bom_cost
-#: model:ir.model.fields,help:mrp.field_product_template__bom_cost
-#: model_terms:ir.ui.view,arch_db:mrp.report_mrp_bom
+#. odoo-python
+#: code:addons/quotation/models/bom.py:0 code:addons/quotation/models/bom.py:0
+#: code:addons/quotation/models/bom.py:0 code:addons/quotation/models/bom.py:0
+#: code:addons/quotation/models/product.py:0
+#: code:addons/quotation/models/product.py:0
+#: code:addons/quotation/static/src/components/bom_overview_table/mrp_bom_overview_table.xml:0
+#: model:ir.model.fields,field_description:quotation.field_mrp_bom__bom_cost
+#: model:ir.model.fields,field_description:quotation.field_mrp_bom__bom_cost_store
+#: model:ir.model.fields,field_description:quotation.field_product_product__bom_cost
+#: model:ir.model.fields,field_description:quotation.field_product_template__bom_cost
+#: model:ir.model.fields,help:quotation.field_mrp_bom__bom_cost
+#: model:ir.model.fields,help:quotation.field_mrp_bom__bom_cost_store
+#: model:ir.model.fields,help:quotation.field_product_product__bom_cost
+#: model:ir.model.fields,help:quotation.field_product_template__bom_cost
+#: model_terms:ir.ui.view,arch_db:quotation.trina_product_template_tree_view
 #, python-format
 msgid "BoM Cost"
 msgstr "BOM成本"
 
 
+#. module: quotation
+#. odoo-python
+#: code:addons/quotation/models/bom.py:0 code:addons/quotation/models/bom.py:0
+#: code:addons/quotation/models/product.py:0
+#: code:addons/quotation/models/product.py:0
+#: model:ir.model.fields,field_description:quotation.field_mrp_bom__bom_aggregate
+#: model:ir.model.fields,field_description:quotation.field_product_product__bom_aggregate
+#: model:ir.model.fields,field_description:quotation.field_product_template__bom_aggregate
+#: model:ir.model.fields,help:quotation.field_mrp_bom__bom_aggregate
+#: model:ir.model.fields,help:quotation.field_product_product__bom_aggregate
+#: model:ir.model.fields,help:quotation.field_product_template__bom_aggregate
+#, python-format
+msgid "BoM Aggregate"
+msgstr "BOM全范围"
+
 #. module: mrp
 #. odoo-python
-#: code:addons/mrp/models/mrp_bom_cost.py:0
 #: code:addons/mrp/models/mrp_bom_cost.py:0
 #: model:ir.model.fields,field_description:mrp.field_mrp_bom__bom_aggregate
 #: model:ir.model.fields,help:mrp.field_mrp_bom__bom_aggregate
@@ -1020,12 +1036,26 @@ msgstr "BOM成本"
 msgid "BoM Aggregate"
 msgstr "BOM全范围"
 
+#. module: quotation
+#: model:ir.model,name:quotation.model_utils_bom_aggregate
+msgid "BOM Aggregate"
+msgstr "BOM全范围"
+
 #. module: mrp
 #. odoo-python
 #: code:addons/mrp/models/mrp_bom_cost.py:0
 #: code:addons/mrp/models/mrp_bom_cost.py:0
 #: model:ir.model.fields,field_description:mrp.field_mrp_bom__bom_lead_time
 #: model:ir.model.fields,help:mrp.field_mrp_bom__bom_lead_time
+#, python-format
+msgid "BoM Lead Time"
+msgstr "BOM 提前量"
+
+#. module: quotation
+#. odoo-python
+#: code:addons/quotation/models/bom.py:0 code:addons/quotation/models/bom.py:0
+#: model:ir.model.fields,field_description:quotation.field_mrp_bom__bom_lead_time
+#: model:ir.model.fields,help:quotation.field_mrp_bom__bom_lead_time
 #, python-format
 msgid "BoM Lead Time"
 msgstr "BOM 提前量"
@@ -6524,3 +6554,30 @@ msgstr "风荷载"
 #: model:ir.ui.menu,name:quotation.menu_trina_root
 msgid "Trina"
 msgstr "天河光能"
+
+#. module: quotation
+#. odoo-python
+#: code:addons/quotation/models/product.py:0
+#: code:addons/quotation/models/product.py:0
+#: model:ir.model.fields,field_description:quotation.field_product_product__length
+#: model:ir.model.fields,field_description:quotation.field_product_template__length
+#: model:ir.model.fields,help:quotation.field_product_product__length
+#: model:ir.model.fields,help:quotation.field_product_template__length
+#, python-format
+msgid "Length"
+msgstr "长度"
+
+#. module: quotation
+#: model:ir.model.fields,field_description:quotation.field_product_product__material
+#: model:ir.model.fields,field_description:quotation.field_product_template__material
+msgid "Material"
+msgstr "材料"
+
+#. module: quotation
+#. odoo-python
+#: code:addons/quotation/models/bom.py:0 code:addons/quotation/models/bom.py:0
+#: model:ir.model.fields,field_description:quotation.field_mrp_bom__tilt_angle
+#: model:ir.model.fields,help:quotation.field_mrp_bom__tilt_angle
+#, python-format
+msgid "倾斜角度"
+msgstr ""

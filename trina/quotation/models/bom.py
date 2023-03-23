@@ -2,6 +2,7 @@
 from odoo import fields, _
 from odoo import api
 from odoo.exceptions import ValidationError
+from odoo.addons.mrp.models.product import OPERATORS
 
 import logging
 
@@ -214,7 +215,13 @@ class TrinaBom(BomAggregate):
             report_data = self._get_report_data(record)
             record.number_of_components = len(report_data['lines']['aggregate'])
 
+
     def _search_bom_cost(self, operator, value):
+        ids = self.env['mrp.bom'].search([]).filtered(
+                lambda x: OPERATORS[operator](x.bom_cost, value)).ids
+        return [('id', 'in', ids)]
+
+    def __search_bom_cost(self, operator, value):
         if operator == '>':
             ids = self.env['mrp.bom'].search([]).filtered(
                 lambda x: x.bom_cost > value).ids
@@ -235,13 +242,17 @@ class TrinaBom(BomAggregate):
                 lambda x: x.bom_cost != value).ids
         return [('id', 'in', ids)]
 
-
     def _compute_bom_lead_time(self):
         for record in self:
             report_data = self._get_report_data(record)
             record.bom_lead_time = report_data['lines']['lead_time']
 
     def _search_bom_lead_time(self, operator, value):
+        ids = self.env['mrp.bom'].search([]).filtered(
+                lambda x: OPERATORS[operator](x.bom_lead_time, value)).ids
+        return [('id', 'in', ids)]
+
+    def __search_bom_lead_time(self, operator, value):
         if operator == '>':
             ids = self.env['mrp.bom'].search([]).filtered(
                 lambda x: x.bom_lead_time > value).ids

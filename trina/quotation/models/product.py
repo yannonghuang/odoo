@@ -7,11 +7,13 @@ import operator as py_operator
 from odoo import fields, models, api, _
 from odoo.tools import groupby
 from odoo.tools.float_utils import float_round, float_is_zero
+from odoo.addons.mrp.models.product import OPERATORS
 
 import logging
 
 _logger = logging.getLogger(__name__)
 
+'''
 OPERATORS = {
     '<': py_operator.lt,
     '>': py_operator.gt,
@@ -20,7 +22,7 @@ OPERATORS = {
     '=': py_operator.eq,
     '!=': py_operator.ne
 }
-
+'''
 class TrinaProduct(models.Model):
     _inherit = ["product.template"]
 
@@ -29,6 +31,13 @@ class TrinaProduct(models.Model):
         compute='_compute_bom_cost',
         search='_search_bom_cost',
         help=_("BoM Cost"),
+    )
+
+    bom_aggregate = fields.Char(
+        _("BoM Aggregate"),
+        compute='_compute_bom_aggregate',
+        search='_search_bom_aggregate',
+        help=_("BoM Aggregate")
     )
 
     length = fields.Float(
@@ -58,7 +67,12 @@ class TrinaProduct(models.Model):
             except:
                 record.bom_cost = record.standard_price
 
+
     def _search_bom_cost(self, operator, value):
+        ids = self.env['product.template'].search([]).filtered(
+            lambda x: OPERATORS[operator](x.bom_cost, value)).ids
+        return [('id', 'in', ids)]
+    def __search_bom_cost(self, operator, value):
         _logger.info('ProductTemplate._search_bom_cost: %s %s', operator, value)
         if operator == '>':
             boms = self.env['mrp.bom'].search([]).filtered(
@@ -82,6 +96,18 @@ class TrinaProduct(models.Model):
         for bom in boms:
             ids.append(bom.product_tmpl_id.id)
             _logger.info('template: %s', bom.product_tmpl_id.display_name)
+        return [('id', 'in', ids)]
+
+    def _compute_bom_aggregate(self):
+        for record in self:
+            try:
+                record.bom_aggregate = record.bom_ids[0].bom_aggregate
+            except:
+                record.bom_aggregate = record.display_name
+
+    def _search_bom_aggregate(self, operator, value):
+        ids = self.env['product.template'].search([]).filtered(
+            lambda x: value.lower() in x.bom_aggregate.lower()).ids
         return [('id', 'in', ids)]
 
     @api.returns('self', lambda value: value.id)

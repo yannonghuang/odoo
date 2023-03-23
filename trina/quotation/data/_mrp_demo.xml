@@ -13,9 +13,11 @@
             <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="description">Trina Solutions 1</field>
             <field name="default_code">trina_solutions_1</field>
+            <field name="produce_delay">10.0</field>
             <field name="length">5500</field>
             <field name="material">AL6005-T5</field>
             <field name="image_1920" type="base64" file="quotation/static/img/carport.jpg"/>
+            <field name="route_ids" eval="[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]"/>
         </record>
 
         <record id="trina_component_SPC_CS_CR" model="product.product">
