@@ -61,31 +61,31 @@ class ExportBomXML(models.AbstractModel):
         return result
 
     def _export_routing_id(self, operation):
-        #return str(operation.name)
-        return 'export_routing_' + str(operation.id)
+        return operation.get_metadata()[0].get('xmlid')
+        #return 'export_routing_' + str(operation.id)
 
     def _export_workcenter_id(self, workcenter):
-        #return str(workcenter.name)
-        return 'export_workcenter_' + str(workcenter.id)
+        return workcenter.get_metadata()[0].get('xmlid')
+        #return 'export_workcenter_' + str(workcenter.id)
     def _export_product_tmpl_id(self, bom):
-        #return str(bom.product_tmpl_id.name)
-        return 'export_product_tmpl_' + str(bom.product_tmpl_id.id)
+        return bom.product_tmpl_id.get_metadata()[0].get('xmlid')
+        #return 'export_product_tmpl_' + str(bom.product_tmpl_id.id)
 
     def _export_route_id(self, route_id):
-        #return str(route_id.name)
-        return 'export_route_' + str(route_id.id)
+        return route_id.get_metadata()[0].get('xmlid')
+        #return 'export_route_' + str(route_id.id)
 
     def _export_bom_id(self, bom):
-        #return str(bom.display_name)
-        return 'export_bom_' + str(bom.id)
+        return bom.get_metadata()[0].get('xmlid')
+        #return 'export_bom_' + str(bom.id)
 
     def _export_bom_line_id(self, bom_line):
-        #return str(bom_line.display_name)
-        return 'export_bom_line_' + str(bom_line.id)
+        return bom_line.get_metadata()[0].get('xmlid')
+        #return 'export_bom_line_' + str(bom_line.id)
 
     def _export_product_product_id(self, bom_line):
-        #return str(bom_line.product_id.name)
-        return 'export_product_product_' + str(bom_line.product_id.id)
+        return bom_line.product_id.get_metadata()[0].get('xmlid')
+        #return 'export_product_product_' + str(bom_line.product_id.id)
 
     def _print_routing_workcenter(self, bom):
         result = ''
@@ -136,9 +136,11 @@ class ExportBomXML(models.AbstractModel):
         result += '\" model=\"product.product\">\n'
         result += self._print_fields(bom.product_tmpl_id)
         if route_ids:
-            result += '\t\t\t<field name = \"route_ids\" eval = \"[(6, 0, [ref(\'mrp.route_warehouse0_manufacture\')])]\" />\n'
-            #result += '\t\t\t<field name = \"route_ids\" eval = \"[(6, 0, [' + ", ".join('ref(\'' + self._export_route_id(route_id) + '\')' for route_id in route_ids) + '])]\" />\n'
-            #result += '\t\t\t<field name = \"route_ids\" eval = \"[(6, 0, [ref(\'' + route_id + '\')])]\" />\n'
+            #result += '\t\t\t<field name = \"route_ids\" eval = \"[(6, 0, [ref(\'mrp.route_warehouse0_manufacture\')])]\" />\n'
+            result += '\t\t\t<field name = \"route_ids\" eval = \"[(6, 0, [' + \
+                      ", ".join('ref(\'' + self._export_route_id(route_id) + '\')' for route_id in route_ids) + \
+                      '])]\" />\n'
+
         result += '\t\t</record>\n'
 
         result += '\t\t<record id=\"'
