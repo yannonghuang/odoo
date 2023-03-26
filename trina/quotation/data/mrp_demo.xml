@@ -1,284 +1,284 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-	<data noupdate="1">
-		<record id="quotation.trina_solutions_1_product_template" model="product.product">
-			<field name = "name">trina_solutions_1</field>
-			<field name = "sequence">1</field>
-			<field name = "description">Trina Solutions 1</field>
-			<field name = "detailed_type">product</field>
-			<field name = "list_price">10.0</field>
-			<field name = "standard_price">10.0</field>
-			<field name = "sale_ok">True</field>
-			<field name = "purchase_ok">True</field>
-			<field name = "active">True</field>
-			<field name = "default_code">trina_solutions_1</field>
-			<field name = "priority">0</field>
-			<field name = "produce_delay">10.0</field>
-			<field name = "length">5500.0</field>
-			<field name = "material">AL6005-T5</field>
-			<field name = "wind_load">10.0</field>
-			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
-		</record>
-		<record id="quotation.trina_bom_1" model="mrp.bom">
-			<field name = "active">True</field>
-			<field name = "type">normal</field>
-			<field name = "product_qty">1.0</field>
-			<field name = "sequence">1</field>
-			<field name = "ready_to_produce">all_available</field>
-			<field name = "consumption">warning</field>
-			<field name = "number_of_panels">248</field>
-			<field name = "panel_length">2102.0</field>
-			<field name = "panel_width">1040.0</field>
-			<field name = "panel_power">400.0</field>
-			<field name = "panel_spacing">1090.0</field>
-			<field name = "channel_length">4400.0</field>
-			<field name = "number_of_isolators">5</field>
-			<field name = "wind_load">10.0</field>
-			<field name = "tilt_angle">45.0</field>
-			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "quotation.trina_solutions_1_product_template_product_template" />
-		</record>
+    <data noupdate="1">
 
-		<record id="quotation.trina_component_SPC_CS_CR" model="product.product">
-			<field name = "name">SPC_CS_CR</field>
-			<field name = "sequence">1</field>
-			<field name = "description">Carport Rail</field>
-			<field name = "detailed_type">product</field>
-			<field name = "list_price">10.0</field>
-			<field name = "standard_price">100.0</field>
-			<field name = "sale_ok">True</field>
-			<field name = "purchase_ok">True</field>
-			<field name = "active">True</field>
-			<field name = "default_code">SPC_CS_CR</field>
-			<field name = "priority">0</field>
-			<field name = "length">5500.0</field>
-			<field name = "material">AL6005-T5</field>
-			<field name = "wind_load">10.0</field>
-		</record>
+        <record id="trina_solutions_1" model="product.template">
+            <field name="name">trina_solutions_1</field>
+            <field name="categ_id" ref="product.product_category_5"/>
+            <field name="standard_price">10</field>
+            <field name="list_price">10</field>
+            <field name="detailed_type">product</field>
+            <field name="weight">0.01</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description">Trina Solutions 1</field>
+            <field name="default_code">trina_solutions_1</field>
+            <field name="produce_delay">10.0</field>
+            <field name="length">5500</field>
+            <field name="material">AL6005-T5</field>
+            <field name="image_1920" type="base64" file="quotation/static/img/carport.jpg"/>
+            <field name="route_ids" eval="[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]"/>
+        </record>
 
-		<record id="quotation.trina_bom_1_line_1" model="mrp.bom.line">
-			<field name = "product_qty">18.0</field>
-			<field name = "sequence">10</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_CR" />
-		</record>
+        <record id="trina_component_SPC_CS_CR" model="product.product">
+            <field name="name">SPC_CS_CR</field>
+            <field name="categ_id" ref="product.product_category_5"/>
+            <field name="standard_price">100</field>
+            <field name="list_price">10</field>
+            <field name="detailed_type">product</field>
+            <field name="weight">0.01</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description">Carport Rail</field>
+            <field name="default_code">SPC_CS_CR</field>
+            <field name="length">5500</field>
+            <field name="material">AL6005-T5</field>
+            <field name="image_1920" type="base64" file="quotation/static/img/carport.jpg"/>
+        </record>
 
-		<record id="quotation.trina_component_SPC_CS_MB" model="product.product">
-			<field name = "name">SPC-CS-MB</field>
-			<field name = "sequence">1</field>
-			<field name = "description">Main Beam</field>
-			<field name = "detailed_type">product</field>
-			<field name = "list_price">10.0</field>
-			<field name = "standard_price">500.0</field>
-			<field name = "sale_ok">True</field>
-			<field name = "purchase_ok">True</field>
-			<field name = "active">True</field>
-			<field name = "default_code">SPC-CS-MB</field>
-			<field name = "priority">0</field>
-			<field name = "length">5300.0</field>
-			<field name = "material">AL6005-T5</field>
-			<field name = "wind_load">10.0</field>
-		</record>
-
-		<record id="quotation.trina_bom_1_line_2" model="mrp.bom.line">
-			<field name = "product_qty">4.0</field>
-			<field name = "sequence">20</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_MB" />
-		</record>
-
-		<record id="quotation.trina_component_SPC_CS_IS" model="product.product">
-			<field name = "name">SPC-CS-IS</field>
-			<field name = "sequence">1</field>
-			<field name = "description">Inclined Support(2358,3165,3005,3501)</field>
-			<field name = "detailed_type">product</field>
-			<field name = "list_price">10.0</field>
-			<field name = "standard_price">150.0</field>
-			<field name = "sale_ok">True</field>
-			<field name = "purchase_ok">True</field>
-			<field name = "active">True</field>
-			<field name = "default_code">SPC-CS-IS</field>
-			<field name = "priority">0</field>
-			<field name = "length">2358.0</field>
-			<field name = "material">AL6005-T5</field>
-			<field name = "wind_load">10.0</field>
-		</record>
-
-		<record id="quotation.trina_bom_1_line_3" model="mrp.bom.line">
-			<field name = "product_qty">16.0</field>
-			<field name = "sequence">30</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_IS" />
-		</record>
-
-		<record id="quotation.trina_component_SPC_CS_BB_02" model="product.product">
-			<field name = "name">SPC-CS-BB-02</field>
-			<field name = "sequence">1</field>
-			<field name = "description">Bottom Base 02#</field>
-			<field name = "detailed_type">product</field>
-			<field name = "list_price">10.0</field>
-			<field name = "standard_price">90.0</field>
-			<field name = "sale_ok">True</field>
-			<field name = "purchase_ok">True</field>
-			<field name = "active">True</field>
-			<field name = "default_code">SPC-CS-BB-02</field>
-			<field name = "priority">0</field>
-			<field name = "length">280.0</field>
-			<field name = "material">AL6005-T5 SUS304</field>
-			<field name = "wind_load">10.0</field>
-		</record>
-
-		<record id="quotation.trina_bom_1_line_4" model="mrp.bom.line">
-			<field name = "product_qty">8.0</field>
-			<field name = "sequence">40</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_BB_02" />
-		</record>
-
-		<record id="quotation.trina_component_SPC_CS_BC_01" model="product.product">
-			<field name = "name">SPC-CS-BC-01</field>
-			<field name = "sequence">1</field>
-			<field name = "description">Beam Connect Kit 01#</field>
-			<field name = "detailed_type">product</field>
-			<field name = "list_price">10.0</field>
-			<field name = "standard_price">70.0</field>
-			<field name = "sale_ok">True</field>
-			<field name = "purchase_ok">True</field>
-			<field name = "active">True</field>
-			<field name = "default_code">SPC-CS-BC-01</field>
-			<field name = "priority">0</field>
-			<field name = "length">140.0</field>
-			<field name = "material">AL6005-T5 SUS304</field>
-			<field name = "wind_load">10.0</field>
-		</record>
-
-		<record id="quotation.trina_bom_1_line_5" model="mrp.bom.line">
-			<field name = "product_qty">8.0</field>
-			<field name = "sequence">50</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_BC_01" />
-		</record>
-
-		<record id="quotation.trina_component_SPC_CS_BC_02" model="product.product">
-			<field name = "name">SPC-CS-BC-02</field>
-			<field name = "sequence">1</field>
-			<field name = "description">Beam Connect Kit 02#</field>
-			<field name = "detailed_type">product</field>
-			<field name = "list_price">10.0</field>
-			<field name = "standard_price">140.0</field>
-			<field name = "sale_ok">True</field>
-			<field name = "purchase_ok">True</field>
-			<field name = "active">True</field>
-			<field name = "default_code">SPC-CS-BC-02</field>
-			<field name = "priority">0</field>
-			<field name = "length">250.0</field>
-			<field name = "material">AL6005-T5 SUS304</field>
-			<field name = "wind_load">10.0</field>
-		</record>
-
-		<record id="quotation.trina_bom_1_line_6" model="mrp.bom.line">
-			<field name = "product_qty">4.0</field>
-			<field name = "sequence">60</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_BC_02" />
-		</record>
-
-		<record id="quotation.trina_component_SPC_CS_CRS" model="product.product">
-			<field name = "name">SPC-CS-CRS</field>
-			<field name = "sequence">1</field>
-			<field name = "description">Carport Rail Splice Kit</field>
-			<field name = "detailed_type">product</field>
-			<field name = "list_price">10.0</field>
-			<field name = "standard_price">250.0</field>
-			<field name = "sale_ok">True</field>
-			<field name = "purchase_ok">True</field>
-			<field name = "active">True</field>
-			<field name = "default_code">SPC-CS-CRS</field>
-			<field name = "priority">0</field>
-			<field name = "length">520.0</field>
-			<field name = "material">AL6005-T5 SUS304</field>
-			<field name = "wind_load">10.0</field>
-		</record>
-
-		<record id="quotation.trina_bom_1_line_7" model="mrp.bom.line">
-			<field name = "product_qty">12.0</field>
-			<field name = "sequence">70</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_CRS" />
-		</record>
-
-		<record id="quotation.trina_component_SPC_CS_GRC_50" model="product.product">
-			<field name = "name">SPC-CS-GRC-50</field>
-			<field name = "sequence">1</field>
-			<field name = "description">Rail Fasten Clip</field>
-			<field name = "detailed_type">product</field>
-			<field name = "list_price">10.0</field>
-			<field name = "standard_price">150.0</field>
-			<field name = "sale_ok">True</field>
-			<field name = "purchase_ok">True</field>
-			<field name = "active">True</field>
-			<field name = "default_code">SPC-CS-GRC-50</field>
-			<field name = "priority">0</field>
-			<field name = "length">50.0</field>
-			<field name = "material">AL6005-T5 SUS304</field>
-			<field name = "wind_load">10.0</field>
-		</record>
-
-		<record id="quotation.trina_bom_1_line_8" model="mrp.bom.line">
-			<field name = "product_qty">96.0</field>
-			<field name = "sequence">80</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_GRC_50" />
-		</record>
-
-		<record id="quotation.trina_component_SPC_MC_C_L35" model="product.product">
-			<field name = "name">SPC-MC-C-L35</field>
-			<field name = "sequence">1</field>
-			<field name = "description">Mid Clamp</field>
-			<field name = "detailed_type">product</field>
-			<field name = "list_price">10.0</field>
-			<field name = "standard_price">50.0</field>
-			<field name = "sale_ok">True</field>
-			<field name = "purchase_ok">True</field>
-			<field name = "active">True</field>
-			<field name = "default_code">SPC-MC-C-L35</field>
-			<field name = "priority">0</field>
-			<field name = "length">35.0</field>
-			<field name = "material">AL6005-T5 SUS304</field>
-			<field name = "wind_load">10.0</field>
-		</record>
-
-		<record id="quotation.trina_bom_1_line_9" model="mrp.bom.line">
-			<field name = "product_qty">80.0</field>
-			<field name = "sequence">90</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_MC_C_L35" />
-		</record>
-
-		<record id="quotation.trina_component_SPC_EC_C_L35" model="product.product">
-			<field name = "name">SPC-EC-C-L35</field>
-			<field name = "sequence">1</field>
-			<field name = "description">End Clamp</field>
-			<field name = "detailed_type">product</field>
-			<field name = "list_price">10.0</field>
-			<field name = "standard_price">50.0</field>
-			<field name = "sale_ok">True</field>
-			<field name = "purchase_ok">True</field>
-			<field name = "active">True</field>
-			<field name = "default_code">SPC-EC-C-L35</field>
-			<field name = "priority">0</field>
-			<field name = "length">35.0</field>
-			<field name = "material">AL6005-T5 SUS304</field>
-			<field name = "wind_load">10.0</field>
-		</record>
-
-		<record id="quotation.trina_bom_1_line_10" model="mrp.bom.line">
-			<field name = "product_qty">40.0</field>
-			<field name = "sequence">100</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_EC_C_L35" />
-		</record>
+        <record id="trina_component_SPC_CS_MB" model="product.product">
+            <field name="name">SPC-CS-MB</field>
+            <field name="categ_id" ref="product.product_category_5"/>
+            <field name="standard_price">500</field>
+            <field name="list_price">10</field>
+            <field name="detailed_type">product</field>
+            <field name="weight">0.01</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description">Main Beam</field>
+            <field name="default_code">SPC-CS-MB</field>
+            <field name="length">5300</field>
+            <field name="material">AL6005-T5</field>
+            <field name="image_1920" type="base64" file="quotation/static/img/carport.jpg"/>
+        </record>
 
 
-	</data>
+        <record id="trina_component_SPC_CS_IS" model="product.product">
+            <field name="name">SPC-CS-IS</field>
+            <field name="categ_id" ref="product.product_category_5"/>
+            <field name="standard_price">150</field>
+            <field name="list_price">10</field>
+            <field name="detailed_type">product</field>
+            <field name="weight">0.01</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description">Inclined Support(2358,3165,3005,3501)</field>
+            <field name="default_code">SPC-CS-IS</field>
+            <field name="length">2358</field>
+            <field name="material">AL6005-T5</field>
+            <field name="image_1920" type="base64" file="quotation/static/img/carport.jpg"/>
+        </record>
+
+        <record id="trina_component_SPC_CS_BB_02" model="product.product">
+            <field name="name">SPC-CS-BB-02</field>
+            <field name="categ_id" ref="product.product_category_5"/>
+            <field name="standard_price">90</field>
+            <field name="list_price">10</field>
+            <field name="detailed_type">product</field>
+            <field name="weight">0.01</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description">Bottom Base 02#</field>
+            <field name="default_code">SPC-CS-BB-02</field>
+            <field name="length">280</field>
+            <field name="material">AL6005-T5 SUS304</field>
+            <field name="image_1920" type="base64" file="quotation/static/img/carport.jpg"/>
+        </record>
+
+
+        <record id="trina_component_SPC_CS_BC_01" model="product.product">
+            <field name="name">SPC-CS-BC-01</field>
+            <field name="categ_id" ref="product.product_category_5"/>
+            <field name="standard_price">70</field>
+            <field name="list_price">10</field>
+            <field name="detailed_type">product</field>
+            <field name="weight">0.01</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description">Beam Connect Kit 01#</field>
+            <field name="default_code">SPC-CS-BC-01</field>
+            <field name="length">140</field>
+            <field name="material">AL6005-T5 SUS304</field>
+            <field name="image_1920" type="base64" file="quotation/static/img/carport.jpg"/>
+        </record>
+
+        <record id="trina_component_SPC_CS_BC_02" model="product.product">
+            <field name="name">SPC-CS-BC-02</field>
+            <field name="categ_id" ref="product.product_category_5"/>
+            <field name="standard_price">140</field>
+            <field name="list_price">10</field>
+            <field name="detailed_type">product</field>
+            <field name="weight">0.01</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description">Beam Connect Kit 02#</field>
+            <field name="default_code">SPC-CS-BC-02</field>
+            <field name="length">250</field>
+            <field name="material">AL6005-T5 SUS304</field>
+            <field name="image_1920" type="base64" file="quotation/static/img/carport.jpg"/>
+        </record>
+
+        <record id="trina_component_SPC_CS_CRS" model="product.product">
+            <field name="name">SPC-CS-CRS</field>
+            <field name="categ_id" ref="product.product_category_5"/>
+            <field name="standard_price">250</field>
+            <field name="list_price">10</field>
+            <field name="detailed_type">product</field>
+            <field name="weight">0.01</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description">Carport Rail Splice Kit</field>
+            <field name="default_code">SPC-CS-CRS</field>
+            <field name="length">520</field>
+            <field name="material">AL6005-T5 SUS304</field>
+            <field name="image_1920" type="base64" file="quotation/static/img/carport.jpg"/>
+        </record>
+
+        <record id="trina_component_SPC_CS_GRC_50" model="product.product">
+            <field name="name">SPC-CS-GRC-50</field>
+            <field name="categ_id" ref="product.product_category_5"/>
+            <field name="standard_price">150</field>
+            <field name="list_price">10</field>
+            <field name="detailed_type">product</field>
+            <field name="weight">0.01</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description">Rail Fasten Clip</field>
+            <field name="default_code">SPC-CS-GRC-50</field>
+            <field name="length">50</field>
+            <field name="material">AL6005-T5 SUS304</field>
+            <field name="image_1920" type="base64" file="quotation/static/img/carport.jpg"/>
+        </record>
+
+        <record id="trina_component_SPC_MC_C_L35" model="product.product">
+            <field name="name">SPC-MC-C-L35</field>
+            <field name="categ_id" ref="product.product_category_5"/>
+            <field name="standard_price">50</field>
+            <field name="list_price">10</field>
+            <field name="detailed_type">product</field>
+            <field name="weight">0.01</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description">Mid Clamp</field>
+            <field name="default_code">SPC-MC-C-L35</field>
+            <field name="length">35</field>
+            <field name="material">AL6005-T5 SUS304</field>
+            <field name="image_1920" type="base64" file="quotation/static/img/carport.jpg"/>
+        </record>
+
+        <record id="trina_component_SPC_EC_C_L35" model="product.product">
+            <field name="name">SPC-EC-C-L35</field>
+            <field name="categ_id" ref="product.product_category_5"/>
+            <field name="standard_price">50</field>
+            <field name="list_price">10</field>
+            <field name="detailed_type">product</field>
+            <field name="weight">0.01</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description">End Clamp</field>
+            <field name="default_code">SPC-EC-C-L35</field>
+            <field name="length">35</field>
+            <field name="material">AL6005-T5 SUS304</field>
+            <field name="image_1920" type="base64" file="quotation/static/img/carport.jpg"/>
+        </record>
+        <!-- Resource: mrp.bom -->
+
+
+        <record id="trina_bom_1" model="mrp.bom">
+            <field name="product_tmpl_id" ref="trina_solutions_1"/>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="sequence">1</field>
+            <field name="number_of_panels">248</field>
+            <field name="panel_length">2102</field>
+            <field name="panel_width">1040</field>
+            <field name="panel_power">400</field>
+            <field name="panel_spacing">1090</field>
+            <field name="channel_length">4400</field>
+            <field name="number_of_isolators">5</field>
+            <field name="wind_load">10</field>
+            <field name="tilt_angle">45</field>
+            <field name="installation_type">roof</field>
+        </record>
+
+        <record id="trina_bom_1_line_1" model="mrp.bom.line">
+            <field name="product_id" ref="trina_component_SPC_CS_CR"/>
+            <field name="product_qty">18</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="sequence">10</field>
+            <field name="bom_id" ref="trina_bom_1"/>
+        </record>
+
+        <record id="trina_bom_1_line_2" model="mrp.bom.line">
+            <field name="product_id" ref="trina_component_SPC_CS_MB"/>
+            <field name="product_qty">4</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="sequence">20</field>
+            <field name="bom_id" ref="trina_bom_1"/>
+        </record>
+
+        <record id="trina_bom_1_line_3" model="mrp.bom.line">
+            <field name="product_id" ref="trina_component_SPC_CS_IS"/>
+            <field name="product_qty">16</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="sequence">30</field>
+            <field name="bom_id" ref="trina_bom_1"/>
+        </record>
+
+        <record id="trina_bom_1_line_4" model="mrp.bom.line">
+            <field name="product_id" ref="trina_component_SPC_CS_BB_02"/>
+            <field name="product_qty">8</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="sequence">40</field>
+            <field name="bom_id" ref="trina_bom_1"/>
+        </record>
+
+        <record id="trina_bom_1_line_5" model="mrp.bom.line">
+            <field name="product_id" ref="trina_component_SPC_CS_BC_01"/>
+            <field name="product_qty">8</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="sequence">50</field>
+            <field name="bom_id" ref="trina_bom_1"/>
+        </record>
+
+        <record id="trina_bom_1_line_6" model="mrp.bom.line">
+            <field name="product_id" ref="trina_component_SPC_CS_BC_02"/>
+            <field name="product_qty">4</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="sequence">60</field>
+            <field name="bom_id" ref="trina_bom_1"/>
+        </record>
+
+        <record id="trina_bom_1_line_7" model="mrp.bom.line">
+            <field name="product_id" ref="trina_component_SPC_CS_CRS"/>
+            <field name="product_qty">12</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="sequence">70</field>
+            <field name="bom_id" ref="trina_bom_1"/>
+        </record>
+
+        <record id="trina_bom_1_line_8" model="mrp.bom.line">
+            <field name="product_id" ref="trina_component_SPC_CS_GRC_50"/>
+            <field name="product_qty">96</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="sequence">80</field>
+            <field name="bom_id" ref="trina_bom_1"/>
+        </record>
+
+        <record id="trina_bom_1_line_9" model="mrp.bom.line">
+            <field name="product_id" ref="trina_component_SPC_MC_C_L35"/>
+            <field name="product_qty">80</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="sequence">90</field>
+            <field name="bom_id" ref="trina_bom_1"/>
+        </record>
+
+        <record id="trina_bom_1_line_10" model="mrp.bom.line">
+            <field name="product_id" ref="trina_component_SPC_EC_C_L35"/>
+            <field name="product_qty">40</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="sequence">100</field>
+            <field name="bom_id" ref="trina_bom_1"/>
+        </record>
+
+    </data>
 </odoo>

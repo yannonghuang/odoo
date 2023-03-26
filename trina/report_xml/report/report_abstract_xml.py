@@ -37,7 +37,6 @@ class ReportXMLAbstract(models.AbstractModel):
 
     def create_xml_report(self, docids, data):
         objs = self._get_objs_for_report(docids, data)
-        self.generate_xml_report(data, objs)
         return self.generate_xml_report(data, objs), "xml"
 
     def generate_xml_report(self, data, objs):
