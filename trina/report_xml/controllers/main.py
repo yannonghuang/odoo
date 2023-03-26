@@ -23,7 +23,7 @@ _logger = logging.getLogger(__name__)
 
 
 class ReportController(report.ReportController):
-    #@route()
+    @route()
     def report_routes(self, reportname, docids=None, converter=None, **data):
         if converter == "xml":
             report = request.env["ir.actions.report"]._get_report_from_name(reportname)
