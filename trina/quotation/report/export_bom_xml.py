@@ -61,31 +61,52 @@ class ExportBomXML(models.AbstractModel):
         return result
 
     def _export_routing_id(self, operation):
-        return operation.get_metadata()[0].get('xmlid')
-        #return 'export_routing_' + str(operation.id)
+        xmlid = operation.get_metadata()[0].get('xmlid')
+        if type(xmlid) == str:
+            return xmlid
+        else:
+            return 'export_routing_' + str(operation.id)
 
     def _export_workcenter_id(self, workcenter):
-        return workcenter.get_metadata()[0].get('xmlid')
-        #return 'export_workcenter_' + str(workcenter.id)
+        xmlid = workcenter.get_metadata()[0].get('xmlid')
+        if type(xmlid) == str:
+            return xmlid
+        else:
+            return 'export_workcenter_' + str(workcenter.id)
     def _export_product_tmpl_id(self, bom):
-        return bom.product_tmpl_id.get_metadata()[0].get('xmlid')
-        #return 'export_product_tmpl_' + str(bom.product_tmpl_id.id)
+        xmlid = bom.product_tmpl_id.get_metadata()[0].get('xmlid')
+        if type(xmlid) == str:
+            return xmlid
+        else:
+            return 'export_product_tmpl_' + str(bom.product_tmpl_id.id)
 
     def _export_route_id(self, route_id):
-        return route_id.get_metadata()[0].get('xmlid')
-        #return 'export_route_' + str(route_id.id)
+        xmlid = route_id.get_metadata()[0].get('xmlid')
+        if type(xmlid) == str:
+            return xmlid
+        else:
+            return 'export_route_' + str(route_id.id)
 
     def _export_bom_id(self, bom):
-        return bom.get_metadata()[0].get('xmlid')
-        #return 'export_bom_' + str(bom.id)
+        xmlid = bom.get_metadata()[0].get('xmlid')
+        if type(xmlid) == str:
+            return xmlid
+        else:
+            return 'export_bom_' + str(bom.id)
 
     def _export_bom_line_id(self, bom_line):
-        return bom_line.get_metadata()[0].get('xmlid')
-        #return 'export_bom_line_' + str(bom_line.id)
+        xmlid = bom_line.get_metadata()[0].get('xmlid')
+        if type(xmlid) == str:
+            return xmlid
+        else:
+            return 'export_bom_line_' + str(bom_line.id)
 
     def _export_product_product_id(self, bom_line):
-        return bom_line.product_id.get_metadata()[0].get('xmlid')
-        #return 'export_product_product_' + str(bom_line.product_id.id)
+        xmlid = bom_line.product_id.get_metadata()[0].get('xmlid')
+        if type(xmlid) == str:
+            return xmlid
+        else:
+            return 'export_product_product_' + str(bom_line.product_id.id)
 
     def _print_routing_workcenter(self, bom):
         result = ''

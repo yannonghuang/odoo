@@ -14,7 +14,7 @@ _logger = logging.getLogger(__name__)
 class TrinaBom(BomAggregate):
     _inherit = ['mrp.bom']
     _description = 'Trina BOM'
-    _dico = {}
+    #_dico = {}
     _rec_names_search = ['product_tmpl_id', 'code', 'bom_aggregate']
 
     number_of_panels = fields.Integer(
@@ -156,9 +156,10 @@ class TrinaBom(BomAggregate):
         # all records passed the test, don't return anything
 
     def _get_report_data(self, record):
+        return super()._get_report_data(record.id)
         #if record not in self._dico:
-        self._dico[record] = super()._get_report_data(record.id)
-        return self._dico[record]
+        #self._dico[record] = super()._get_report_data(record.id)
+        #return self._dico[record]
 
     def _print_template(self, t):
         template = self.env[t['model']].search([('id', '=', t['id'])])

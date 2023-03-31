@@ -9,13 +9,14 @@
     'category': 'Manufacturing/Manufacturing',
     'sequence': 55,
     'summary': 'Trina Quotation Management',
-    'depends': ['product', 'stock', 'resource', 'mrp', 'sale', 'report_xml'],
+    'depends': ['product', 'stock', 'resource', 'mrp', 'sale', 'base_automation', 'report_xml'],
     'data': [
         'views/menu.xml',
         'views/bom.xml',
         'views/product.xml',
 
         'data/export_bom_xml.xml',
+        'data/automated_actions.xml',
     ],
     'demo': [
         'data/mrp_demo.xml',

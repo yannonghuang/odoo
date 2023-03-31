@@ -11,6 +11,23 @@ _logger = logging.getLogger(__name__)
 class BomAggregate(ReportBomStructure):
     _name = 'utils.bom_aggregate'
     _description = 'BOM Aggregate'
+    _processed = {}
+
+    def _get_bom_id(self, bom):
+        xmlid = bom.get_metadata()[0].get('xmlid')
+        if type(xmlid) == str:
+            return xmlid
+        else:
+            return 'export_bom_' + str(bom.id)
+
+    def reset(self):
+        self._processed.clear()
+
+    @api.model
+    def ____get_report_data(self, bom_id, searchQty=0, searchVariant=False):
+        if bom_id not in self._processed:
+            self._processed[bom_id] = super()._get_report_data(bom_id, searchQty, searchVariant)
+        return self._processed[bom_id]
 
     @api.model
     def _get_bom_data(self, bom, warehouse, product=False, line_qty=False, bom_line=False, level=0, parent_bom=False, index=0, product_info=False, ignore_stock=False):
@@ -19,6 +36,10 @@ class BomAggregate(ReportBomStructure):
             - 'minimized': Will cut all data not required to compute availability estimations.
             - 'from_date': Gives a single value for 'today' across the functions, as well as using this date in products quantity computes.
         """
+        bomId = self._get_bom_id(bom)
+        if bomId in self._processed:
+            return self._processed[bomId]
+
         is_minimized = self.env.context.get('minimized', False)
         if not product:
             product = bom.product_id or bom.product_tmpl_id.product_variant_id
@@ -138,6 +159,8 @@ class BomAggregate(ReportBomStructure):
         if level == 0:
             # Gives a unique key for the first line that indicates if product is ready for production right now.
             bom_report_line['components_available'] = all([c['stock_avail_state'] == 'available' for c in components])
+
+        self._processed[bomId] = bom_report_line
         return bom_report_line
 
     @api.model
