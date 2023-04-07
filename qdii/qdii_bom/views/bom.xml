@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="qdii_bom_cost_tree_view" model="ir.ui.view">
+            <field name="name">qdii.bom.cost.tree</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="bom_cost" optional="hide" invisible="1" />
+                    <field name="bom_cost_store" optional="show" />
+                    <field name="bom_lead_time"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="qdii_bom_cost_form_view" model="ir.ui.view">
+            <field name="name">qdii.bom.cost.form</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='o_row']" position="after">
+                    <field name="bom_cost"/>
+                    <field name="number_of_components"/>
+                </xpath>
+                <!-- xpath expr="//page[@name='components']" position="before">
+                    <page string="Metrics" name="metrics" >
+                        <group name="length">
+                            <label for="number_of_panels"/>
+                            <div class="o_row" name="number_of_panels">
+                                <field name="number_of_panels" class="oe_inline"/>
+                            </div>
+                            <label for="panel_length"/>
+                            <div class="o_row" name="panel_length">
+                                <field name="panel_length" class="oe_inline"/>
+                                <field name="length_uom_name"/>
+                            </div>
+                            <label for="panel_width"/>
+                            <div class="o_row" name="panel_width">
+                                <field name="panel_width" class="oe_inline"/>
+                                <field name="length_uom_name"/>
+                            </div>
+                            <label for="panel_power"/>
+                            <div class="o_row" name="panel_power">
+                                <field name="panel_power" class="oe_inline"/>
+                            </div>
+                            <label for="total_power"/>
+                            <div class="o_row" name="total_power">
+                                <field name="total_power" class="oe_inline"/>
+                            </div>
+                            <label for="panel_spacing"/>
+                            <div class="o_row" name="panel_spacing">
+                                <field name="panel_spacing" class="oe_inline"/>
+                                <field name="length_uom_name"/>
+                            </div>
+                            <label for="channel_length"/>
+                            <div class="o_row" name="channel_length">
+                                <field name="channel_length" class="oe_inline"/>
+                                <field name="length_uom_name"/>
+                            </div>
+                            <label for="number_of_isolators"/>
+                            <div class="o_row" name="number_of_isolators">
+                                <field name="number_of_isolators" class="oe_inline"/>
+                            </div>
+                            <label for="wind_load"/>
+                            <div class="o_row" name="wind_load">
+                                <field name="wind_load" class="oe_inline"/>
+                            </div>
+                            <label for="tilt_angle"/>
+                            <div class="o_row" name="tilt_angle">
+                                <field name="tilt_angle" class="oe_inline"/>
+                            </div>
+                            <label for="installation_type"/>
+                            <div class="o_row" name="installation_type">
+                                <field name="installation_type" class="oe_inline"/>
+                            </div>
+                        </group>
+                    </page>
+                </xpath -->
+            </field>
+        </record>
+
+        <menuitem id="menu_mrp_bom_form_action"
+            action="mrp.mrp_bom_form_action"
+            parent="menu_qdii_bom"
+            sequence="13"/>
+
+    </data>
+</odoo>

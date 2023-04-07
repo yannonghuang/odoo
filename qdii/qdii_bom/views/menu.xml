@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_qdii_root"
+        name="QDII"
+        sequence="1450">
+
+        <menuitem id="menu_qdii_product"
+            name="Product"
+            sequence="20"/>
+
+        <menuitem id="menu_qdii_bom"
+            name="BOM"
+            sequence="25"/>
+
+        <menuitem id="menu_quotations"
+            name="Quotation"
+            action="sale.action_quotations_with_onboarding"
+            sequence="30"/>
+
+    </menuitem>
+</odoo>
