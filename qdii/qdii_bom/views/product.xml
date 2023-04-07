@@ -1,49 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-
-        <!-- record id="qdii_product_form_view" model="ir.ui.view">
+        <record id="qdii_product_form_view" model="ir.ui.view">
             <field name="name">trina.product.form.view</field>
             <field name="model">product.template</field>
             <field name="inherit_id" ref="mrp.view_mrp_product_template_form_inherited"/>
             <field name="arch" type="xml">
-                <xpath expr="//page[@name='general_information']" position="before">
-                    <page string="Metrics" name="metrics" >
-                        <group name="length">
-                            <label for="length"/>
-                            <div class="o_row" name="length">
-                                <field name="length" class="oe_inline"/>
-                                <field name="length_uom_name"/>
-                            </div>
-                            <label for="default_code"/>
-                            <div class="o_row" name="default_code">
-                                <field name="default_code" class="oe_inline"/>
-                            </div>
-                            <label for="description"/>
-                            <div class="o_row" name="description">
-                                <field name="description" class="oe_inline"/>
-                            </div>
-                            <label for="material"/>
-                            <div class="o_row" name="material">
-                                <field name="material" class="oe_inline"/>
-                            </div>
-                            <label for="wind_load"/>
-                            <div class="o_row" name="wind_load">
-                                <field name="wind_load" class="oe_inline"/>
-                            </div>
-                            <label for="uom_name"/>
-                            <div class="o_row" name="uom_name">
-                                <field name="uom_id" class="oe_inline"/>
-                            </div>
-                            <label for="bom_cost"/>
-                            <div>
-                                <field name="bom_cost" class="oe_inline"/>
-                            </div>
-                        </group>
-                    </page>
+                <xpath expr="//field[@name='categ_id']" position="before">
+                    <label for="bom_cost"/>
+                    <div>
+                        <field name="bom_cost" class="oe_inline"/>
+                    </div>
                 </xpath>
             </field>
-        </record -->
+        </record>
 
         <record id="qdii_product_template_tree_view" model="ir.ui.view">
             <field name="name">product.template.product.tree</field>
