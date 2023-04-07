@@ -8,7 +8,7 @@
     'website': 'https://www.odoo.com/app/manufacturing',
     'category': 'Manufacturing/Manufacturing',
     'sequence': 55,
-    'summary': 'Trina Product Configuration',
+    'summary': 'Trina Product Configurator',
     'depends': ['qdii_bom'],
     'data': [
         'views/menu.xml',

@@ -36,7 +36,7 @@
 			<field name = "product_tmpl_id" ref = "export_product_tmpl_60_product_template" />
 		</record>
 
-		<record id="quotation.trina_solutions_1" model="product.product">
+		<record id="configurator.trina_solutions_1" model="product.product">
 			<field name = "name">trina_solutions_1</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Trina Solutions 1</field>
@@ -55,7 +55,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
 		</record>
-		<record id="quotation.trina_bom_1" model="mrp.bom">
+		<record id="configurator.trina_bom_1" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -72,10 +72,10 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "quotation.trina_solutions_1_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.trina_solutions_1_product_template" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_CR" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_CR" model="product.product">
 			<field name = "name">SPC_CS_CR</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Carport Rail</field>
@@ -93,14 +93,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="quotation.trina_bom_1_line_1" model="mrp.bom.line">
+		<record id="configurator.trina_bom_1_line_1" model="mrp.bom.line">
 			<field name = "product_qty">18.0</field>
 			<field name = "sequence">10</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_CR" />
+			<field name = "bom_id" ref = "configurator.trina_bom_1" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_CR" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_MB" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_MB" model="product.product">
 			<field name = "name">SPC-CS-MB</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Main Beam</field>
@@ -118,14 +118,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="quotation.trina_bom_1_line_2" model="mrp.bom.line">
+		<record id="configurator.trina_bom_1_line_2" model="mrp.bom.line">
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">20</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_MB" />
+			<field name = "bom_id" ref = "configurator.trina_bom_1" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_MB" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_IS" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_IS" model="product.product">
 			<field name = "name">SPC-CS-IS</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Inclined Support(2358,3165,3005,3501)</field>
@@ -143,14 +143,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="quotation.trina_bom_1_line_3" model="mrp.bom.line">
+		<record id="configurator.trina_bom_1_line_3" model="mrp.bom.line">
 			<field name = "product_qty">16.0</field>
 			<field name = "sequence">30</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_IS" />
+			<field name = "bom_id" ref = "configurator.trina_bom_1" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_IS" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_BB_02" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_BB_02" model="product.product">
 			<field name = "name">SPC-CS-BB-02</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Bottom Base 02#</field>
@@ -168,14 +168,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="quotation.trina_bom_1_line_4" model="mrp.bom.line">
+		<record id="configurator.trina_bom_1_line_4" model="mrp.bom.line">
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">40</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_BB_02" />
+			<field name = "bom_id" ref = "configurator.trina_bom_1" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BB_02" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_BC_01" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_BC_01" model="product.product">
 			<field name = "name">SPC-CS-BC-01</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Beam Connect Kit 01#</field>
@@ -193,14 +193,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="quotation.trina_bom_1_line_5" model="mrp.bom.line">
+		<record id="configurator.trina_bom_1_line_5" model="mrp.bom.line">
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">50</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_BC_01" />
+			<field name = "bom_id" ref = "configurator.trina_bom_1" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BC_01" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_BC_02" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_BC_02" model="product.product">
 			<field name = "name">SPC-CS-BC-02</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Beam Connect Kit 02#</field>
@@ -218,14 +218,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="quotation.trina_bom_1_line_6" model="mrp.bom.line">
+		<record id="configurator.trina_bom_1_line_6" model="mrp.bom.line">
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">60</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_BC_02" />
+			<field name = "bom_id" ref = "configurator.trina_bom_1" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BC_02" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_CRS" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_CRS" model="product.product">
 			<field name = "name">SPC-CS-CRS</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Carport Rail Splice Kit</field>
@@ -243,14 +243,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="quotation.trina_bom_1_line_7" model="mrp.bom.line">
+		<record id="configurator.trina_bom_1_line_7" model="mrp.bom.line">
 			<field name = "product_qty">12.0</field>
 			<field name = "sequence">70</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_CRS" />
+			<field name = "bom_id" ref = "configurator.trina_bom_1" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_CRS" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_GRC_50" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_GRC_50" model="product.product">
 			<field name = "name">SPC-CS-GRC-50</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Rail Fasten Clip</field>
@@ -268,14 +268,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="quotation.trina_bom_1_line_8" model="mrp.bom.line">
+		<record id="configurator.trina_bom_1_line_8" model="mrp.bom.line">
 			<field name = "product_qty">96.0</field>
 			<field name = "sequence">80</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_GRC_50" />
+			<field name = "bom_id" ref = "configurator.trina_bom_1" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_GRC_50" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_MC_C_L35" model="product.product">
+		<record id="configurator.trina_component_SPC_MC_C_L35" model="product.product">
 			<field name = "name">SPC-MC-C-L35</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Mid Clamp</field>
@@ -293,14 +293,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="quotation.trina_bom_1_line_9" model="mrp.bom.line">
+		<record id="configurator.trina_bom_1_line_9" model="mrp.bom.line">
 			<field name = "product_qty">80.0</field>
 			<field name = "sequence">90</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_MC_C_L35" />
+			<field name = "bom_id" ref = "configurator.trina_bom_1" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_MC_C_L35" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_EC_C_L35" model="product.product">
+		<record id="configurator.trina_component_SPC_EC_C_L35" model="product.product">
 			<field name = "name">SPC-EC-C-L35</field>
 			<field name = "sequence">1</field>
 			<field name = "description">End Clamp</field>
@@ -318,18 +318,18 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="quotation.trina_bom_1_line_10" model="mrp.bom.line">
+		<record id="configurator.trina_bom_1_line_10" model="mrp.bom.line">
 			<field name = "product_qty">40.0</field>
 			<field name = "sequence">100</field>
-			<field name = "bom_id" ref = "quotation.trina_bom_1" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_EC_C_L35" />
+			<field name = "bom_id" ref = "configurator.trina_bom_1" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_EC_C_L35" />
 		</record>
 
 		<record id="export_bom_line_73" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
 			<field name = "bom_id" ref = "export_bom_15" />
-			<field name = "product_id" ref = "quotation.trina_solutions_1" />
+			<field name = "product_id" ref = "configurator.trina_solutions_1" />
 		</record>
 
 		<record id="export_product_tmpl_55" model="product.product">
@@ -369,7 +369,7 @@
 			<field name = "product_tmpl_id" ref = "export_product_tmpl_55_product_template" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_CR" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_CR" model="product.product">
 			<field name = "name">SPC_CS_CR</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Carport Rail</field>
@@ -391,10 +391,10 @@
 			<field name = "product_qty">18.0</field>
 			<field name = "sequence">10</field>
 			<field name = "bom_id" ref = "export_bom_10" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_CR" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_CR" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_MB" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_MB" model="product.product">
 			<field name = "name">SPC-CS-MB</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Main Beam</field>
@@ -416,10 +416,10 @@
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">20</field>
 			<field name = "bom_id" ref = "export_bom_10" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_MB" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_MB" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_IS" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_IS" model="product.product">
 			<field name = "name">SPC-CS-IS</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Inclined Support(2358,3165,3005,3501)</field>
@@ -441,10 +441,10 @@
 			<field name = "product_qty">16.0</field>
 			<field name = "sequence">30</field>
 			<field name = "bom_id" ref = "export_bom_10" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_IS" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_IS" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_BB_02" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_BB_02" model="product.product">
 			<field name = "name">SPC-CS-BB-02</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Bottom Base 02#</field>
@@ -466,10 +466,10 @@
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">40</field>
 			<field name = "bom_id" ref = "export_bom_10" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_BB_02" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BB_02" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_BC_01" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_BC_01" model="product.product">
 			<field name = "name">SPC-CS-BC-01</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Beam Connect Kit 01#</field>
@@ -491,10 +491,10 @@
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">50</field>
 			<field name = "bom_id" ref = "export_bom_10" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_BC_01" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BC_01" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_BC_02" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_BC_02" model="product.product">
 			<field name = "name">SPC-CS-BC-02</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Beam Connect Kit 02#</field>
@@ -516,10 +516,10 @@
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">60</field>
 			<field name = "bom_id" ref = "export_bom_10" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_BC_02" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BC_02" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_CRS" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_CRS" model="product.product">
 			<field name = "name">SPC-CS-CRS</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Carport Rail Splice Kit</field>
@@ -541,10 +541,10 @@
 			<field name = "product_qty">12.0</field>
 			<field name = "sequence">70</field>
 			<field name = "bom_id" ref = "export_bom_10" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_CRS" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_CRS" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_GRC_50" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_GRC_50" model="product.product">
 			<field name = "name">SPC-CS-GRC-50</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Rail Fasten Clip</field>
@@ -566,10 +566,10 @@
 			<field name = "product_qty">96.0</field>
 			<field name = "sequence">80</field>
 			<field name = "bom_id" ref = "export_bom_10" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_GRC_50" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_GRC_50" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_MC_C_L35" model="product.product">
+		<record id="configurator.trina_component_SPC_MC_C_L35" model="product.product">
 			<field name = "name">SPC-MC-C-L35</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Mid Clamp</field>
@@ -591,10 +591,10 @@
 			<field name = "product_qty">80.0</field>
 			<field name = "sequence">90</field>
 			<field name = "bom_id" ref = "export_bom_10" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_MC_C_L35" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_MC_C_L35" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_EC_C_L35" model="product.product">
+		<record id="configurator.trina_component_SPC_EC_C_L35" model="product.product">
 			<field name = "name">SPC-EC-C-L35</field>
 			<field name = "sequence">1</field>
 			<field name = "description">End Clamp</field>
@@ -616,7 +616,7 @@
 			<field name = "product_qty">40.0</field>
 			<field name = "sequence">100</field>
 			<field name = "bom_id" ref = "export_bom_10" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_EC_C_L35" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_EC_C_L35" />
 		</record>
 
 		<record id="export_bom_line_74" model="mrp.bom.line">
@@ -663,7 +663,7 @@
 			<field name = "product_tmpl_id" ref = "export_product_tmpl_56_product_template" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_CR" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_CR" model="product.product">
 			<field name = "name">SPC_CS_CR</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Carport Rail</field>
@@ -685,10 +685,10 @@
 			<field name = "product_qty">18.0</field>
 			<field name = "sequence">10</field>
 			<field name = "bom_id" ref = "export_bom_11" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_CR" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_CR" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_MB" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_MB" model="product.product">
 			<field name = "name">SPC-CS-MB</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Main Beam</field>
@@ -710,10 +710,10 @@
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">20</field>
 			<field name = "bom_id" ref = "export_bom_11" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_MB" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_MB" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_IS" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_IS" model="product.product">
 			<field name = "name">SPC-CS-IS</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Inclined Support(2358,3165,3005,3501)</field>
@@ -735,10 +735,10 @@
 			<field name = "product_qty">16.0</field>
 			<field name = "sequence">30</field>
 			<field name = "bom_id" ref = "export_bom_11" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_IS" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_IS" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_BB_02" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_BB_02" model="product.product">
 			<field name = "name">SPC-CS-BB-02</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Bottom Base 02#</field>
@@ -760,10 +760,10 @@
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">40</field>
 			<field name = "bom_id" ref = "export_bom_11" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_BB_02" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BB_02" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_BC_01" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_BC_01" model="product.product">
 			<field name = "name">SPC-CS-BC-01</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Beam Connect Kit 01#</field>
@@ -785,10 +785,10 @@
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">50</field>
 			<field name = "bom_id" ref = "export_bom_11" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_BC_01" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BC_01" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_BC_02" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_BC_02" model="product.product">
 			<field name = "name">SPC-CS-BC-02</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Beam Connect Kit 02#</field>
@@ -810,10 +810,10 @@
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">60</field>
 			<field name = "bom_id" ref = "export_bom_11" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_BC_02" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BC_02" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_CRS" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_CRS" model="product.product">
 			<field name = "name">SPC-CS-CRS</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Carport Rail Splice Kit</field>
@@ -835,10 +835,10 @@
 			<field name = "product_qty">12.0</field>
 			<field name = "sequence">70</field>
 			<field name = "bom_id" ref = "export_bom_11" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_CRS" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_CRS" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_GRC_50" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_GRC_50" model="product.product">
 			<field name = "name">SPC-CS-GRC-50</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Rail Fasten Clip</field>
@@ -860,10 +860,10 @@
 			<field name = "product_qty">96.0</field>
 			<field name = "sequence">80</field>
 			<field name = "bom_id" ref = "export_bom_11" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_GRC_50" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_GRC_50" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_MC_C_L35" model="product.product">
+		<record id="configurator.trina_component_SPC_MC_C_L35" model="product.product">
 			<field name = "name">SPC-MC-C-L35</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Mid Clamp</field>
@@ -885,10 +885,10 @@
 			<field name = "product_qty">80.0</field>
 			<field name = "sequence">90</field>
 			<field name = "bom_id" ref = "export_bom_11" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_MC_C_L35" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_MC_C_L35" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_EC_C_L35" model="product.product">
+		<record id="configurator.trina_component_SPC_EC_C_L35" model="product.product">
 			<field name = "name">SPC-EC-C-L35</field>
 			<field name = "sequence">1</field>
 			<field name = "description">End Clamp</field>
@@ -910,7 +910,7 @@
 			<field name = "product_qty">40.0</field>
 			<field name = "sequence">100</field>
 			<field name = "bom_id" ref = "export_bom_11" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_EC_C_L35" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_EC_C_L35" />
 		</record>
 
 		<record id="export_bom_line_75" model="mrp.bom.line">
@@ -957,7 +957,7 @@
 			<field name = "product_tmpl_id" ref = "export_product_tmpl_57_product_template" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_CR" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_CR" model="product.product">
 			<field name = "name">SPC_CS_CR</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Carport Rail</field>
@@ -979,10 +979,10 @@
 			<field name = "product_qty">18.0</field>
 			<field name = "sequence">10</field>
 			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_CR" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_CR" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_MB" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_MB" model="product.product">
 			<field name = "name">SPC-CS-MB</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Main Beam</field>
@@ -1004,10 +1004,10 @@
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">20</field>
 			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_MB" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_MB" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_IS" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_IS" model="product.product">
 			<field name = "name">SPC-CS-IS</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Inclined Support(2358,3165,3005,3501)</field>
@@ -1029,10 +1029,10 @@
 			<field name = "product_qty">16.0</field>
 			<field name = "sequence">30</field>
 			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_IS" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_IS" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_BB_02" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_BB_02" model="product.product">
 			<field name = "name">SPC-CS-BB-02</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Bottom Base 02#</field>
@@ -1054,10 +1054,10 @@
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">40</field>
 			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_BB_02" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BB_02" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_BC_01" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_BC_01" model="product.product">
 			<field name = "name">SPC-CS-BC-01</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Beam Connect Kit 01#</field>
@@ -1079,10 +1079,10 @@
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">50</field>
 			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_BC_01" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BC_01" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_BC_02" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_BC_02" model="product.product">
 			<field name = "name">SPC-CS-BC-02</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Beam Connect Kit 02#</field>
@@ -1104,10 +1104,10 @@
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">60</field>
 			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_BC_02" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BC_02" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_CRS" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_CRS" model="product.product">
 			<field name = "name">SPC-CS-CRS</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Carport Rail Splice Kit</field>
@@ -1129,10 +1129,10 @@
 			<field name = "product_qty">12.0</field>
 			<field name = "sequence">70</field>
 			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_CRS" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_CRS" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_GRC_50" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_GRC_50" model="product.product">
 			<field name = "name">SPC-CS-GRC-50</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Rail Fasten Clip</field>
@@ -1154,10 +1154,10 @@
 			<field name = "product_qty">96.0</field>
 			<field name = "sequence">80</field>
 			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_GRC_50" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_GRC_50" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_MC_C_L35" model="product.product">
+		<record id="configurator.trina_component_SPC_MC_C_L35" model="product.product">
 			<field name = "name">SPC-MC-C-L35</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Mid Clamp</field>
@@ -1179,10 +1179,10 @@
 			<field name = "product_qty">80.0</field>
 			<field name = "sequence">90</field>
 			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_MC_C_L35" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_MC_C_L35" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_EC_C_L35" model="product.product">
+		<record id="configurator.trina_component_SPC_EC_C_L35" model="product.product">
 			<field name = "name">SPC-EC-C-L35</field>
 			<field name = "sequence">1</field>
 			<field name = "description">End Clamp</field>
@@ -1204,7 +1204,7 @@
 			<field name = "product_qty">40.0</field>
 			<field name = "sequence">100</field>
 			<field name = "bom_id" ref = "export_bom_12" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_EC_C_L35" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_EC_C_L35" />
 		</record>
 
 		<record id="export_bom_line_76" model="mrp.bom.line">
@@ -1251,7 +1251,7 @@
 			<field name = "product_tmpl_id" ref = "export_product_tmpl_58_product_template" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_CR" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_CR" model="product.product">
 			<field name = "name">SPC_CS_CR</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Carport Rail</field>
@@ -1273,10 +1273,10 @@
 			<field name = "product_qty">18.0</field>
 			<field name = "sequence">10</field>
 			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_CR" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_CR" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_MB" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_MB" model="product.product">
 			<field name = "name">SPC-CS-MB</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Main Beam</field>
@@ -1298,10 +1298,10 @@
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">20</field>
 			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_MB" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_MB" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_IS" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_IS" model="product.product">
 			<field name = "name">SPC-CS-IS</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Inclined Support(2358,3165,3005,3501)</field>
@@ -1323,10 +1323,10 @@
 			<field name = "product_qty">16.0</field>
 			<field name = "sequence">30</field>
 			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_IS" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_IS" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_BB_02" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_BB_02" model="product.product">
 			<field name = "name">SPC-CS-BB-02</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Bottom Base 02#</field>
@@ -1348,10 +1348,10 @@
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">40</field>
 			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_BB_02" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BB_02" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_BC_01" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_BC_01" model="product.product">
 			<field name = "name">SPC-CS-BC-01</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Beam Connect Kit 01#</field>
@@ -1373,10 +1373,10 @@
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">50</field>
 			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_BC_01" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BC_01" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_BC_02" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_BC_02" model="product.product">
 			<field name = "name">SPC-CS-BC-02</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Beam Connect Kit 02#</field>
@@ -1398,10 +1398,10 @@
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">60</field>
 			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_BC_02" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BC_02" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_CRS" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_CRS" model="product.product">
 			<field name = "name">SPC-CS-CRS</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Carport Rail Splice Kit</field>
@@ -1423,10 +1423,10 @@
 			<field name = "product_qty">12.0</field>
 			<field name = "sequence">70</field>
 			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_CRS" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_CRS" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_CS_GRC_50" model="product.product">
+		<record id="configurator.trina_component_SPC_CS_GRC_50" model="product.product">
 			<field name = "name">SPC-CS-GRC-50</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Rail Fasten Clip</field>
@@ -1448,10 +1448,10 @@
 			<field name = "product_qty">96.0</field>
 			<field name = "sequence">80</field>
 			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_CS_GRC_50" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_GRC_50" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_MC_C_L35" model="product.product">
+		<record id="configurator.trina_component_SPC_MC_C_L35" model="product.product">
 			<field name = "name">SPC-MC-C-L35</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Mid Clamp</field>
@@ -1473,10 +1473,10 @@
 			<field name = "product_qty">80.0</field>
 			<field name = "sequence">90</field>
 			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_MC_C_L35" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_MC_C_L35" />
 		</record>
 
-		<record id="quotation.trina_component_SPC_EC_C_L35" model="product.product">
+		<record id="configurator.trina_component_SPC_EC_C_L35" model="product.product">
 			<field name = "name">SPC-EC-C-L35</field>
 			<field name = "sequence">1</field>
 			<field name = "description">End Clamp</field>
@@ -1498,7 +1498,7 @@
 			<field name = "product_qty">40.0</field>
 			<field name = "sequence">100</field>
 			<field name = "bom_id" ref = "export_bom_13" />
-			<field name = "product_id" ref = "quotation.trina_component_SPC_EC_C_L35" />
+			<field name = "product_id" ref = "configurator.trina_component_SPC_EC_C_L35" />
 		</record>
 
 		<record id="export_bom_line_77" model="mrp.bom.line">
@@ -1547,7 +1547,7 @@
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
 			<field name = "bom_id" ref = "export_bom_16" />
-			<field name = "product_id" ref = "quotation.trina_solutions_1" />
+			<field name = "product_id" ref = "configurator.trina_solutions_1" />
 		</record>
 
 		<record id="export_bom_line_79" model="mrp.bom.line">
@@ -1617,7 +1617,7 @@
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
 			<field name = "bom_id" ref = "export_bom_17" />
-			<field name = "product_id" ref = "quotation.trina_solutions_1" />
+			<field name = "product_id" ref = "configurator.trina_solutions_1" />
 		</record>
 
 		<record id="export_bom_line_84" model="mrp.bom.line">
@@ -1722,7 +1722,7 @@
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
 			<field name = "bom_id" ref = "export_bom_14" />
-			<field name = "product_id" ref = "quotation.trina_solutions_1" />
+			<field name = "product_id" ref = "configurator.trina_solutions_1" />
 		</record>
 
 		<record id="export_bom_line_69" model="mrp.bom.line">
