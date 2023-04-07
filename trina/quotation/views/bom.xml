@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="mrp_bom_cost_tree_view" model="ir.ui.view">
+        <!-- record id="mrp_bom_cost_tree_view" model="ir.ui.view">
             <field name="name">mrp.bom.cost.tree</field>
             <field name="model">mrp.bom</field>
             <field name="inherit_id" ref="mrp.mrp_bom_tree_view"/>
@@ -12,17 +12,13 @@
                     <field name="bom_lead_time"/>
                 </xpath>
             </field>
-        </record>
+        </record -->
 
-        <record id="mrp_bom_cost_form_view" model="ir.ui.view">
-            <field name="name">mrp.bom.cost.form</field>
+        <record id="trina_bom_cost_form_view" model="ir.ui.view">
+            <field name="name">trina.bom.cost.form</field>
             <field name="model">mrp.bom</field>
-            <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+            <field name="inherit_id" ref="qdii_bom.qdii_bom_cost_form_view"/>
             <field name="arch" type="xml">
-                <xpath expr="//div[@class='o_row']" position="after">
-                    <field name="bom_cost"/>
-                    <field name="number_of_components"/>
-                </xpath>
                 <xpath expr="//page[@name='components']" position="before">
                     <page string="Metrics" name="metrics" >
                         <group name="length">
