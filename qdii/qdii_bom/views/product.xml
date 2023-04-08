@@ -26,10 +26,10 @@
             </field>
         </record>
 
-        <menuitem id="menu_qdii_product_form"
+        <!-- menuitem id="menu_qdii_product_form"
             name="Products"
             action="mrp.product_template_action"
-            parent="menu_qdii_product" sequence="1"/>
+            parent="menu_qdii_product" sequence="1"/ -->
 
     </data>
 </odoo>

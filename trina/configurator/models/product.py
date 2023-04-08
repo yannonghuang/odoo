@@ -26,6 +26,7 @@ OPERATORS = {
 '''
 class TrinaProduct(QdiiProduct):
     _inherit = ["product.template"]
+    _description = 'Trina Product'
 
     length = fields.Float(
         _("Length"), default=1.0,

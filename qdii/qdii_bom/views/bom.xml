@@ -80,10 +80,10 @@
             </field>
         </record>
 
-        <menuitem id="menu_mrp_bom_form_action"
+        <!-- menuitem id="menu_mrp_bom_form_action"
             action="mrp.mrp_bom_form_action"
             parent="menu_qdii_bom"
-            sequence="13"/>
+            sequence="13"/ -->
 
     </data>
 </odoo>

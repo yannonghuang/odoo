@@ -1,42 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<data noupdate="1">
-		<record id="export_product_tmpl_60" model="product.product">
-			<field name = "name">trina 2 (copy)</field>
-			<field name = "sequence">1</field>
-			<field name = "detailed_type">product</field>
-			<field name = "list_price">1.0</field>
-			<field name = "sale_ok">True</field>
-			<field name = "purchase_ok">True</field>
-			<field name = "active">True</field>
-			<field name = "priority">0</field>
-			<field name = "produce_delay">10.0</field>
-			<field name = "sale_line_warn">no-message</field>
-			<field name = "length">1.0</field>
-			<field name = "material">AL6005-T5</field>
-			<field name = "wind_load">10.0</field>
-			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
-		</record>
-		<record id="export_bom_15" model="mrp.bom">
-			<field name = "active">True</field>
-			<field name = "type">normal</field>
-			<field name = "product_qty">1.0</field>
-			<field name = "ready_to_produce">all_available</field>
-			<field name = "consumption">warning</field>
-			<field name = "number_of_panels">248</field>
-			<field name = "panel_length">2102.0</field>
-			<field name = "panel_width">1040.0</field>
-			<field name = "panel_power">400.0</field>
-			<field name = "panel_spacing">1090.0</field>
-			<field name = "channel_length">4400.0</field>
-			<field name = "number_of_isolators">5</field>
-			<field name = "wind_load">10.0</field>
-			<field name = "tilt_angle">45.0</field>
-			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_60_product_template" />
-		</record>
-
-		<record id="configurator.trina_solutions_1" model="product.product">
+		<record id="configurator.trina_solutions_1_product_template" model="product.product">
 			<field name = "name">trina_solutions_1</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Trina Solutions 1</field>
@@ -72,7 +37,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "configurator.trina_solutions_1_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.trina_solutions_1_product_template_product_template" />
 		</record>
 
 		<record id="configurator.trina_component_SPC_CS_CR" model="product.product">
@@ -325,14 +290,7 @@
 			<field name = "product_id" ref = "configurator.trina_component_SPC_EC_C_L35" />
 		</record>
 
-		<record id="export_bom_line_73" model="mrp.bom.line">
-			<field name = "product_qty">1.0</field>
-			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_15" />
-			<field name = "product_id" ref = "configurator.trina_solutions_1" />
-		</record>
-
-		<record id="export_product_tmpl_55" model="product.product">
+		<record id="configurator.export_product_tmpl_55_product_template" model="product.product">
 			<field name = "name">trina_solutions_1 (copy)</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Trina Solutions 1</field>
@@ -349,7 +307,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
 		</record>
-		<record id="export_bom_10" model="mrp.bom">
+		<record id="configurator.export_bom_10" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -366,7 +324,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_55_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.export_product_tmpl_55_product_template_product_template" />
 		</record>
 
 		<record id="configurator.trina_component_SPC_CS_CR" model="product.product">
@@ -387,10 +345,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_28" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_28" model="mrp.bom.line">
 			<field name = "product_qty">18.0</field>
 			<field name = "sequence">10</field>
-			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "bom_id" ref = "configurator.export_bom_10" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_CR" />
 		</record>
 
@@ -412,10 +370,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_29" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_29" model="mrp.bom.line">
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">20</field>
-			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "bom_id" ref = "configurator.export_bom_10" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_MB" />
 		</record>
 
@@ -437,10 +395,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_30" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_30" model="mrp.bom.line">
 			<field name = "product_qty">16.0</field>
 			<field name = "sequence">30</field>
-			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "bom_id" ref = "configurator.export_bom_10" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_IS" />
 		</record>
 
@@ -462,10 +420,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_31" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_31" model="mrp.bom.line">
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">40</field>
-			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "bom_id" ref = "configurator.export_bom_10" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BB_02" />
 		</record>
 
@@ -487,10 +445,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_32" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_32" model="mrp.bom.line">
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">50</field>
-			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "bom_id" ref = "configurator.export_bom_10" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BC_01" />
 		</record>
 
@@ -512,10 +470,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_33" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_33" model="mrp.bom.line">
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">60</field>
-			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "bom_id" ref = "configurator.export_bom_10" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BC_02" />
 		</record>
 
@@ -537,10 +495,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_34" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_34" model="mrp.bom.line">
 			<field name = "product_qty">12.0</field>
 			<field name = "sequence">70</field>
-			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "bom_id" ref = "configurator.export_bom_10" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_CRS" />
 		</record>
 
@@ -562,10 +520,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_35" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_35" model="mrp.bom.line">
 			<field name = "product_qty">96.0</field>
 			<field name = "sequence">80</field>
-			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "bom_id" ref = "configurator.export_bom_10" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_GRC_50" />
 		</record>
 
@@ -587,10 +545,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_36" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_36" model="mrp.bom.line">
 			<field name = "product_qty">80.0</field>
 			<field name = "sequence">90</field>
-			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "bom_id" ref = "configurator.export_bom_10" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_MC_C_L35" />
 		</record>
 
@@ -612,21 +570,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_37" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_37" model="mrp.bom.line">
 			<field name = "product_qty">40.0</field>
 			<field name = "sequence">100</field>
-			<field name = "bom_id" ref = "export_bom_10" />
+			<field name = "bom_id" ref = "configurator.export_bom_10" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_EC_C_L35" />
 		</record>
 
-		<record id="export_bom_line_74" model="mrp.bom.line">
-			<field name = "product_qty">1.0</field>
-			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_15" />
-			<field name = "product_id" ref = "export_product_tmpl_55" />
-		</record>
-
-		<record id="export_product_tmpl_56" model="product.product">
+		<record id="configurator.export_product_tmpl_56_product_template" model="product.product">
 			<field name = "name">trina_solutions_1 (copy) (copy)</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Trina Solutions 1</field>
@@ -643,7 +594,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
 		</record>
-		<record id="export_bom_11" model="mrp.bom">
+		<record id="configurator.export_bom_11" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -660,7 +611,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_56_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.export_product_tmpl_56_product_template_product_template" />
 		</record>
 
 		<record id="configurator.trina_component_SPC_CS_CR" model="product.product">
@@ -681,10 +632,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_38" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_38" model="mrp.bom.line">
 			<field name = "product_qty">18.0</field>
 			<field name = "sequence">10</field>
-			<field name = "bom_id" ref = "export_bom_11" />
+			<field name = "bom_id" ref = "configurator.export_bom_11" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_CR" />
 		</record>
 
@@ -706,10 +657,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_39" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_39" model="mrp.bom.line">
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">20</field>
-			<field name = "bom_id" ref = "export_bom_11" />
+			<field name = "bom_id" ref = "configurator.export_bom_11" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_MB" />
 		</record>
 
@@ -731,10 +682,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_40" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_40" model="mrp.bom.line">
 			<field name = "product_qty">16.0</field>
 			<field name = "sequence">30</field>
-			<field name = "bom_id" ref = "export_bom_11" />
+			<field name = "bom_id" ref = "configurator.export_bom_11" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_IS" />
 		</record>
 
@@ -756,10 +707,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_41" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_41" model="mrp.bom.line">
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">40</field>
-			<field name = "bom_id" ref = "export_bom_11" />
+			<field name = "bom_id" ref = "configurator.export_bom_11" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BB_02" />
 		</record>
 
@@ -781,10 +732,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_42" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_42" model="mrp.bom.line">
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">50</field>
-			<field name = "bom_id" ref = "export_bom_11" />
+			<field name = "bom_id" ref = "configurator.export_bom_11" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BC_01" />
 		</record>
 
@@ -806,10 +757,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_43" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_43" model="mrp.bom.line">
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">60</field>
-			<field name = "bom_id" ref = "export_bom_11" />
+			<field name = "bom_id" ref = "configurator.export_bom_11" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BC_02" />
 		</record>
 
@@ -831,10 +782,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_44" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_44" model="mrp.bom.line">
 			<field name = "product_qty">12.0</field>
 			<field name = "sequence">70</field>
-			<field name = "bom_id" ref = "export_bom_11" />
+			<field name = "bom_id" ref = "configurator.export_bom_11" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_CRS" />
 		</record>
 
@@ -856,10 +807,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_45" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_45" model="mrp.bom.line">
 			<field name = "product_qty">96.0</field>
 			<field name = "sequence">80</field>
-			<field name = "bom_id" ref = "export_bom_11" />
+			<field name = "bom_id" ref = "configurator.export_bom_11" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_GRC_50" />
 		</record>
 
@@ -881,10 +832,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_46" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_46" model="mrp.bom.line">
 			<field name = "product_qty">80.0</field>
 			<field name = "sequence">90</field>
-			<field name = "bom_id" ref = "export_bom_11" />
+			<field name = "bom_id" ref = "configurator.export_bom_11" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_MC_C_L35" />
 		</record>
 
@@ -906,21 +857,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_47" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_47" model="mrp.bom.line">
 			<field name = "product_qty">40.0</field>
 			<field name = "sequence">100</field>
-			<field name = "bom_id" ref = "export_bom_11" />
+			<field name = "bom_id" ref = "configurator.export_bom_11" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_EC_C_L35" />
 		</record>
 
-		<record id="export_bom_line_75" model="mrp.bom.line">
-			<field name = "product_qty">1.0</field>
-			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_15" />
-			<field name = "product_id" ref = "export_product_tmpl_56" />
-		</record>
-
-		<record id="export_product_tmpl_57" model="product.product">
+		<record id="configurator.export_product_tmpl_57_product_template" model="product.product">
 			<field name = "name">trina_solutions_1 (copy) (copy) (copy)</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Trina Solutions 1</field>
@@ -937,7 +881,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
 		</record>
-		<record id="export_bom_12" model="mrp.bom">
+		<record id="configurator.export_bom_12" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -954,7 +898,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_57_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.export_product_tmpl_57_product_template_product_template" />
 		</record>
 
 		<record id="configurator.trina_component_SPC_CS_CR" model="product.product">
@@ -975,10 +919,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_48" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_48" model="mrp.bom.line">
 			<field name = "product_qty">18.0</field>
 			<field name = "sequence">10</field>
-			<field name = "bom_id" ref = "export_bom_12" />
+			<field name = "bom_id" ref = "configurator.export_bom_12" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_CR" />
 		</record>
 
@@ -1000,10 +944,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_49" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_49" model="mrp.bom.line">
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">20</field>
-			<field name = "bom_id" ref = "export_bom_12" />
+			<field name = "bom_id" ref = "configurator.export_bom_12" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_MB" />
 		</record>
 
@@ -1025,10 +969,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_50" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_50" model="mrp.bom.line">
 			<field name = "product_qty">16.0</field>
 			<field name = "sequence">30</field>
-			<field name = "bom_id" ref = "export_bom_12" />
+			<field name = "bom_id" ref = "configurator.export_bom_12" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_IS" />
 		</record>
 
@@ -1050,10 +994,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_51" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_51" model="mrp.bom.line">
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">40</field>
-			<field name = "bom_id" ref = "export_bom_12" />
+			<field name = "bom_id" ref = "configurator.export_bom_12" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BB_02" />
 		</record>
 
@@ -1075,10 +1019,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_52" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_52" model="mrp.bom.line">
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">50</field>
-			<field name = "bom_id" ref = "export_bom_12" />
+			<field name = "bom_id" ref = "configurator.export_bom_12" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BC_01" />
 		</record>
 
@@ -1100,10 +1044,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_53" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_53" model="mrp.bom.line">
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">60</field>
-			<field name = "bom_id" ref = "export_bom_12" />
+			<field name = "bom_id" ref = "configurator.export_bom_12" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BC_02" />
 		</record>
 
@@ -1125,10 +1069,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_54" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_54" model="mrp.bom.line">
 			<field name = "product_qty">12.0</field>
 			<field name = "sequence">70</field>
-			<field name = "bom_id" ref = "export_bom_12" />
+			<field name = "bom_id" ref = "configurator.export_bom_12" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_CRS" />
 		</record>
 
@@ -1150,10 +1094,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_55" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_55" model="mrp.bom.line">
 			<field name = "product_qty">96.0</field>
 			<field name = "sequence">80</field>
-			<field name = "bom_id" ref = "export_bom_12" />
+			<field name = "bom_id" ref = "configurator.export_bom_12" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_GRC_50" />
 		</record>
 
@@ -1175,10 +1119,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_56" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_56" model="mrp.bom.line">
 			<field name = "product_qty">80.0</field>
 			<field name = "sequence">90</field>
-			<field name = "bom_id" ref = "export_bom_12" />
+			<field name = "bom_id" ref = "configurator.export_bom_12" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_MC_C_L35" />
 		</record>
 
@@ -1200,21 +1144,14 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_57" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_57" model="mrp.bom.line">
 			<field name = "product_qty">40.0</field>
 			<field name = "sequence">100</field>
-			<field name = "bom_id" ref = "export_bom_12" />
+			<field name = "bom_id" ref = "configurator.export_bom_12" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_EC_C_L35" />
 		</record>
 
-		<record id="export_bom_line_76" model="mrp.bom.line">
-			<field name = "product_qty">1.0</field>
-			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_15" />
-			<field name = "product_id" ref = "export_product_tmpl_57" />
-		</record>
-
-		<record id="export_product_tmpl_58" model="product.product">
+		<record id="configurator.export_product_tmpl_58_product_template" model="product.product">
 			<field name = "name">trina_solutions_1 (copy) (copy) (copy) (copy)</field>
 			<field name = "sequence">1</field>
 			<field name = "description">Trina Solutions 1</field>
@@ -1231,7 +1168,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
 		</record>
-		<record id="export_bom_13" model="mrp.bom">
+		<record id="configurator.export_bom_13" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -1248,7 +1185,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_58_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.export_product_tmpl_58_product_template_product_template" />
 		</record>
 
 		<record id="configurator.trina_component_SPC_CS_CR" model="product.product">
@@ -1269,10 +1206,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_58" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_58" model="mrp.bom.line">
 			<field name = "product_qty">18.0</field>
 			<field name = "sequence">10</field>
-			<field name = "bom_id" ref = "export_bom_13" />
+			<field name = "bom_id" ref = "configurator.export_bom_13" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_CR" />
 		</record>
 
@@ -1294,10 +1231,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_59" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_59" model="mrp.bom.line">
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">20</field>
-			<field name = "bom_id" ref = "export_bom_13" />
+			<field name = "bom_id" ref = "configurator.export_bom_13" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_MB" />
 		</record>
 
@@ -1319,10 +1256,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_60" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_60" model="mrp.bom.line">
 			<field name = "product_qty">16.0</field>
 			<field name = "sequence">30</field>
-			<field name = "bom_id" ref = "export_bom_13" />
+			<field name = "bom_id" ref = "configurator.export_bom_13" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_IS" />
 		</record>
 
@@ -1344,10 +1281,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_61" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_61" model="mrp.bom.line">
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">40</field>
-			<field name = "bom_id" ref = "export_bom_13" />
+			<field name = "bom_id" ref = "configurator.export_bom_13" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BB_02" />
 		</record>
 
@@ -1369,10 +1306,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_62" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_62" model="mrp.bom.line">
 			<field name = "product_qty">8.0</field>
 			<field name = "sequence">50</field>
-			<field name = "bom_id" ref = "export_bom_13" />
+			<field name = "bom_id" ref = "configurator.export_bom_13" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BC_01" />
 		</record>
 
@@ -1394,10 +1331,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_63" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_63" model="mrp.bom.line">
 			<field name = "product_qty">4.0</field>
 			<field name = "sequence">60</field>
-			<field name = "bom_id" ref = "export_bom_13" />
+			<field name = "bom_id" ref = "configurator.export_bom_13" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_BC_02" />
 		</record>
 
@@ -1419,10 +1356,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_64" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_64" model="mrp.bom.line">
 			<field name = "product_qty">12.0</field>
 			<field name = "sequence">70</field>
-			<field name = "bom_id" ref = "export_bom_13" />
+			<field name = "bom_id" ref = "configurator.export_bom_13" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_CRS" />
 		</record>
 
@@ -1444,10 +1381,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_65" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_65" model="mrp.bom.line">
 			<field name = "product_qty">96.0</field>
 			<field name = "sequence">80</field>
-			<field name = "bom_id" ref = "export_bom_13" />
+			<field name = "bom_id" ref = "configurator.export_bom_13" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_CS_GRC_50" />
 		</record>
 
@@ -1469,10 +1406,10 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_66" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_66" model="mrp.bom.line">
 			<field name = "product_qty">80.0</field>
 			<field name = "sequence">90</field>
-			<field name = "bom_id" ref = "export_bom_13" />
+			<field name = "bom_id" ref = "configurator.export_bom_13" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_MC_C_L35" />
 		</record>
 
@@ -1494,21 +1431,84 @@
 			<field name = "wind_load">10.0</field>
 		</record>
 
-		<record id="export_bom_line_67" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_67" model="mrp.bom.line">
 			<field name = "product_qty">40.0</field>
 			<field name = "sequence">100</field>
-			<field name = "bom_id" ref = "export_bom_13" />
+			<field name = "bom_id" ref = "configurator.export_bom_13" />
 			<field name = "product_id" ref = "configurator.trina_component_SPC_EC_C_L35" />
 		</record>
 
-		<record id="export_bom_line_77" model="mrp.bom.line">
-			<field name = "product_qty">1.0</field>
+		<record id="configurator.export_product_tmpl_60_product_template" model="product.product">
+			<field name = "name">trina 2 (copy)</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_15" />
-			<field name = "product_id" ref = "export_product_tmpl_58" />
+			<field name = "detailed_type">product</field>
+			<field name = "list_price">1.0</field>
+			<field name = "sale_ok">True</field>
+			<field name = "purchase_ok">True</field>
+			<field name = "active">True</field>
+			<field name = "priority">0</field>
+			<field name = "produce_delay">10.0</field>
+			<field name = "sale_line_warn">no-message</field>
+			<field name = "length">1.0</field>
+			<field name = "material">AL6005-T5</field>
+			<field name = "wind_load">10.0</field>
+			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
+		</record>
+		<record id="configurator.export_bom_15" model="mrp.bom">
+			<field name = "active">True</field>
+			<field name = "type">normal</field>
+			<field name = "product_qty">1.0</field>
+			<field name = "ready_to_produce">all_available</field>
+			<field name = "consumption">warning</field>
+			<field name = "number_of_panels">248</field>
+			<field name = "panel_length">2102.0</field>
+			<field name = "panel_width">1040.0</field>
+			<field name = "panel_power">400.0</field>
+			<field name = "panel_spacing">1090.0</field>
+			<field name = "channel_length">4400.0</field>
+			<field name = "number_of_isolators">5</field>
+			<field name = "wind_load">10.0</field>
+			<field name = "tilt_angle">45.0</field>
+			<field name = "installation_type">roof</field>
+			<field name = "product_tmpl_id" ref = "configurator.export_product_tmpl_60_product_template_product_template" />
 		</record>
 
-		<record id="export_product_tmpl_61" model="product.product">
+		<record id="configurator.export_bom_line_73" model="mrp.bom.line">
+			<field name = "product_qty">1.0</field>
+			<field name = "sequence">1</field>
+			<field name = "bom_id" ref = "configurator.export_bom_15" />
+			<field name = "product_id" ref = "configurator.trina_solutions_1_product_template" />
+		</record>
+
+		<record id="configurator.export_bom_line_74" model="mrp.bom.line">
+			<field name = "product_qty">1.0</field>
+			<field name = "sequence">1</field>
+			<field name = "bom_id" ref = "configurator.export_bom_15" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_55_product_template" />
+		</record>
+
+		<record id="configurator.export_bom_line_75" model="mrp.bom.line">
+			<field name = "product_qty">1.0</field>
+			<field name = "sequence">1</field>
+			<field name = "bom_id" ref = "configurator.export_bom_15" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_56_product_template" />
+		</record>
+
+		<record id="configurator.export_bom_line_76" model="mrp.bom.line">
+			<field name = "product_qty">1.0</field>
+			<field name = "sequence">1</field>
+			<field name = "bom_id" ref = "configurator.export_bom_15" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_57_product_template" />
+		</record>
+
+		<record id="configurator.export_bom_line_77" model="mrp.bom.line">
+			<field name = "product_qty">1.0</field>
+			<field name = "sequence">1</field>
+			<field name = "bom_id" ref = "configurator.export_bom_15" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_58_product_template" />
+		</record>
+
+		<record id="configurator.export_product_tmpl_61_product_template" model="product.product">
 			<field name = "name">trina 2 (copy) (copy)</field>
 			<field name = "sequence">1</field>
 			<field name = "detailed_type">product</field>
@@ -1524,7 +1524,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
 		</record>
-		<record id="export_bom_16" model="mrp.bom">
+		<record id="configurator.export_bom_16" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -1540,45 +1540,45 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_61_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.export_product_tmpl_61_product_template_product_template" />
 		</record>
 
-		<record id="export_bom_line_78" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_78" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_16" />
-			<field name = "product_id" ref = "configurator.trina_solutions_1" />
+			<field name = "bom_id" ref = "configurator.export_bom_16" />
+			<field name = "product_id" ref = "configurator.trina_solutions_1_product_template" />
 		</record>
 
-		<record id="export_bom_line_79" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_79" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_16" />
-			<field name = "product_id" ref = "export_product_tmpl_55" />
+			<field name = "bom_id" ref = "configurator.export_bom_16" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_55_product_template" />
 		</record>
 
-		<record id="export_bom_line_80" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_80" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_16" />
-			<field name = "product_id" ref = "export_product_tmpl_56" />
+			<field name = "bom_id" ref = "configurator.export_bom_16" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_56_product_template" />
 		</record>
 
-		<record id="export_bom_line_81" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_81" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_16" />
-			<field name = "product_id" ref = "export_product_tmpl_57" />
+			<field name = "bom_id" ref = "configurator.export_bom_16" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_57_product_template" />
 		</record>
 
-		<record id="export_bom_line_82" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_82" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_16" />
-			<field name = "product_id" ref = "export_product_tmpl_58" />
+			<field name = "bom_id" ref = "configurator.export_bom_16" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_58_product_template" />
 		</record>
 
-		<record id="export_product_tmpl_62" model="product.product">
+		<record id="configurator.export_product_tmpl_62_product_template" model="product.product">
 			<field name = "name">trina 2 (copy) (copy) (copy)</field>
 			<field name = "sequence">1</field>
 			<field name = "detailed_type">product</field>
@@ -1594,7 +1594,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
 		</record>
-		<record id="export_bom_17" model="mrp.bom">
+		<record id="configurator.export_bom_17" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -1610,45 +1610,45 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_62_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.export_product_tmpl_62_product_template_product_template" />
 		</record>
 
-		<record id="export_bom_line_83" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_83" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_17" />
-			<field name = "product_id" ref = "configurator.trina_solutions_1" />
+			<field name = "bom_id" ref = "configurator.export_bom_17" />
+			<field name = "product_id" ref = "configurator.trina_solutions_1_product_template" />
 		</record>
 
-		<record id="export_bom_line_84" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_84" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_17" />
-			<field name = "product_id" ref = "export_product_tmpl_55" />
+			<field name = "bom_id" ref = "configurator.export_bom_17" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_55_product_template" />
 		</record>
 
-		<record id="export_bom_line_85" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_85" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_17" />
-			<field name = "product_id" ref = "export_product_tmpl_56" />
+			<field name = "bom_id" ref = "configurator.export_bom_17" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_56_product_template" />
 		</record>
 
-		<record id="export_bom_line_86" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_86" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_17" />
-			<field name = "product_id" ref = "export_product_tmpl_57" />
+			<field name = "bom_id" ref = "configurator.export_bom_17" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_57_product_template" />
 		</record>
 
-		<record id="export_bom_line_87" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_87" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_17" />
-			<field name = "product_id" ref = "export_product_tmpl_58" />
+			<field name = "bom_id" ref = "configurator.export_bom_17" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_58_product_template" />
 		</record>
 
-		<record id="export_product_tmpl_64" model="product.product">
+		<record id="configurator.export_product_tmpl_64_product_template" model="product.product">
 			<field name = "name">trina 3 (copy)</field>
 			<field name = "sequence">1</field>
 			<field name = "detailed_type">product</field>
@@ -1664,7 +1664,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
 		</record>
-		<record id="export_bom_19" model="mrp.bom">
+		<record id="configurator.export_bom_19" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -1680,10 +1680,10 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_64_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.export_product_tmpl_64_product_template_product_template" />
 		</record>
 
-		<record id="export_product_tmpl_59" model="product.product">
+		<record id="configurator.export_product_tmpl_59_product_template" model="product.product">
 			<field name = "name">trina 2</field>
 			<field name = "sequence">1</field>
 			<field name = "detailed_type">product</field>
@@ -1699,7 +1699,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
 		</record>
-		<record id="export_bom_14" model="mrp.bom">
+		<record id="configurator.export_bom_14" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -1715,73 +1715,73 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_59_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.export_product_tmpl_59_product_template_product_template" />
 		</record>
 
-		<record id="export_bom_line_68" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_68" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_14" />
-			<field name = "product_id" ref = "configurator.trina_solutions_1" />
+			<field name = "bom_id" ref = "configurator.export_bom_14" />
+			<field name = "product_id" ref = "configurator.trina_solutions_1_product_template" />
 		</record>
 
-		<record id="export_bom_line_69" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_69" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_14" />
-			<field name = "product_id" ref = "export_product_tmpl_55" />
+			<field name = "bom_id" ref = "configurator.export_bom_14" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_55_product_template" />
 		</record>
 
-		<record id="export_bom_line_70" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_70" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_14" />
-			<field name = "product_id" ref = "export_product_tmpl_56" />
+			<field name = "bom_id" ref = "configurator.export_bom_14" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_56_product_template" />
 		</record>
 
-		<record id="export_bom_line_71" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_71" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_14" />
-			<field name = "product_id" ref = "export_product_tmpl_57" />
+			<field name = "bom_id" ref = "configurator.export_bom_14" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_57_product_template" />
 		</record>
 
-		<record id="export_bom_line_72" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_72" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_14" />
-			<field name = "product_id" ref = "export_product_tmpl_58" />
+			<field name = "bom_id" ref = "configurator.export_bom_14" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_58_product_template" />
 		</record>
 
-		<record id="export_bom_line_92" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_92" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_19" />
-			<field name = "product_id" ref = "export_product_tmpl_59" />
+			<field name = "bom_id" ref = "configurator.export_bom_19" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_59_product_template" />
 		</record>
 
-		<record id="export_bom_line_93" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_93" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_19" />
-			<field name = "product_id" ref = "export_product_tmpl_60" />
+			<field name = "bom_id" ref = "configurator.export_bom_19" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_60_product_template" />
 		</record>
 
-		<record id="export_bom_line_94" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_94" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_19" />
-			<field name = "product_id" ref = "export_product_tmpl_61" />
+			<field name = "bom_id" ref = "configurator.export_bom_19" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_61_product_template" />
 		</record>
 
-		<record id="export_bom_line_95" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_95" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_19" />
-			<field name = "product_id" ref = "export_product_tmpl_62" />
+			<field name = "bom_id" ref = "configurator.export_bom_19" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_62_product_template" />
 		</record>
 
-		<record id="export_product_tmpl_65" model="product.product">
+		<record id="configurator.export_product_tmpl_65_product_template" model="product.product">
 			<field name = "name">trina 3 (copy) (copy)</field>
 			<field name = "sequence">1</field>
 			<field name = "detailed_type">product</field>
@@ -1797,7 +1797,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
 		</record>
-		<record id="export_bom_20" model="mrp.bom">
+		<record id="configurator.export_bom_20" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -1813,38 +1813,38 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_65_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.export_product_tmpl_65_product_template_product_template" />
 		</record>
 
-		<record id="export_bom_line_96" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_96" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_20" />
-			<field name = "product_id" ref = "export_product_tmpl_59" />
+			<field name = "bom_id" ref = "configurator.export_bom_20" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_59_product_template" />
 		</record>
 
-		<record id="export_bom_line_97" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_97" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_20" />
-			<field name = "product_id" ref = "export_product_tmpl_60" />
+			<field name = "bom_id" ref = "configurator.export_bom_20" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_60_product_template" />
 		</record>
 
-		<record id="export_bom_line_98" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_98" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_20" />
-			<field name = "product_id" ref = "export_product_tmpl_61" />
+			<field name = "bom_id" ref = "configurator.export_bom_20" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_61_product_template" />
 		</record>
 
-		<record id="export_bom_line_99" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_99" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_20" />
-			<field name = "product_id" ref = "export_product_tmpl_62" />
+			<field name = "bom_id" ref = "configurator.export_bom_20" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_62_product_template" />
 		</record>
 
-		<record id="export_product_tmpl_66" model="product.product">
+		<record id="configurator.export_product_tmpl_66_product_template" model="product.product">
 			<field name = "name">trina 3 (copy) (copy) (copy)</field>
 			<field name = "sequence">1</field>
 			<field name = "detailed_type">product</field>
@@ -1860,7 +1860,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
 		</record>
-		<record id="export_bom_21" model="mrp.bom">
+		<record id="configurator.export_bom_21" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -1876,38 +1876,38 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_66_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.export_product_tmpl_66_product_template_product_template" />
 		</record>
 
-		<record id="export_bom_line_100" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_100" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_21" />
-			<field name = "product_id" ref = "export_product_tmpl_59" />
+			<field name = "bom_id" ref = "configurator.export_bom_21" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_59_product_template" />
 		</record>
 
-		<record id="export_bom_line_101" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_101" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_21" />
-			<field name = "product_id" ref = "export_product_tmpl_60" />
+			<field name = "bom_id" ref = "configurator.export_bom_21" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_60_product_template" />
 		</record>
 
-		<record id="export_bom_line_102" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_102" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_21" />
-			<field name = "product_id" ref = "export_product_tmpl_61" />
+			<field name = "bom_id" ref = "configurator.export_bom_21" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_61_product_template" />
 		</record>
 
-		<record id="export_bom_line_103" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_103" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_21" />
-			<field name = "product_id" ref = "export_product_tmpl_62" />
+			<field name = "bom_id" ref = "configurator.export_bom_21" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_62_product_template" />
 		</record>
 
-		<record id="export_product_tmpl_67" model="product.product">
+		<record id="configurator.export_product_tmpl_67_product_template" model="product.product">
 			<field name = "name">trina 4</field>
 			<field name = "sequence">1</field>
 			<field name = "detailed_type">product</field>
@@ -1923,7 +1923,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
 		</record>
-		<record id="export_bom_23" model="mrp.bom">
+		<record id="configurator.export_bom_23" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -1939,10 +1939,10 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_67_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.export_product_tmpl_67_product_template_product_template" />
 		</record>
 
-		<record id="export_product_tmpl_63" model="product.product">
+		<record id="configurator.export_product_tmpl_63_product_template" model="product.product">
 			<field name = "name">trina 3</field>
 			<field name = "sequence">1</field>
 			<field name = "detailed_type">product</field>
@@ -1958,7 +1958,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
 		</record>
-		<record id="export_bom_18" model="mrp.bom">
+		<record id="configurator.export_bom_18" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -1974,66 +1974,66 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_63_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.export_product_tmpl_63_product_template_product_template" />
 		</record>
 
-		<record id="export_bom_line_88" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_88" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_18" />
-			<field name = "product_id" ref = "export_product_tmpl_59" />
+			<field name = "bom_id" ref = "configurator.export_bom_18" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_59_product_template" />
 		</record>
 
-		<record id="export_bom_line_89" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_89" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_18" />
-			<field name = "product_id" ref = "export_product_tmpl_60" />
+			<field name = "bom_id" ref = "configurator.export_bom_18" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_60_product_template" />
 		</record>
 
-		<record id="export_bom_line_90" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_90" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_18" />
-			<field name = "product_id" ref = "export_product_tmpl_61" />
+			<field name = "bom_id" ref = "configurator.export_bom_18" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_61_product_template" />
 		</record>
 
-		<record id="export_bom_line_91" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_91" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_18" />
-			<field name = "product_id" ref = "export_product_tmpl_62" />
+			<field name = "bom_id" ref = "configurator.export_bom_18" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_62_product_template" />
 		</record>
 
-		<record id="export_bom_line_108" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_108" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_23" />
-			<field name = "product_id" ref = "export_product_tmpl_63" />
+			<field name = "bom_id" ref = "configurator.export_bom_23" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_63_product_template" />
 		</record>
 
-		<record id="export_bom_line_109" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_109" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_23" />
-			<field name = "product_id" ref = "export_product_tmpl_64" />
+			<field name = "bom_id" ref = "configurator.export_bom_23" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_64_product_template" />
 		</record>
 
-		<record id="export_bom_line_110" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_110" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_23" />
-			<field name = "product_id" ref = "export_product_tmpl_65" />
+			<field name = "bom_id" ref = "configurator.export_bom_23" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_65_product_template" />
 		</record>
 
-		<record id="export_bom_line_111" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_111" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_23" />
-			<field name = "product_id" ref = "export_product_tmpl_66" />
+			<field name = "bom_id" ref = "configurator.export_bom_23" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_66_product_template" />
 		</record>
 
-		<record id="export_product_tmpl_67" model="product.product">
+		<record id="configurator.export_product_tmpl_67_product_template" model="product.product">
 			<field name = "name">trina 4</field>
 			<field name = "sequence">1</field>
 			<field name = "detailed_type">product</field>
@@ -2049,7 +2049,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
 		</record>
-		<record id="export_bom_24" model="mrp.bom">
+		<record id="configurator.export_bom_24" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -2065,38 +2065,38 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_67_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.export_product_tmpl_67_product_template_product_template" />
 		</record>
 
-		<record id="export_bom_line_112" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_112" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_24" />
-			<field name = "product_id" ref = "export_product_tmpl_63" />
+			<field name = "bom_id" ref = "configurator.export_bom_24" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_63_product_template" />
 		</record>
 
-		<record id="export_bom_line_113" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_113" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_24" />
-			<field name = "product_id" ref = "export_product_tmpl_64" />
+			<field name = "bom_id" ref = "configurator.export_bom_24" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_64_product_template" />
 		</record>
 
-		<record id="export_bom_line_114" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_114" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_24" />
-			<field name = "product_id" ref = "export_product_tmpl_65" />
+			<field name = "bom_id" ref = "configurator.export_bom_24" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_65_product_template" />
 		</record>
 
-		<record id="export_bom_line_115" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_115" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_24" />
-			<field name = "product_id" ref = "export_product_tmpl_66" />
+			<field name = "bom_id" ref = "configurator.export_bom_24" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_66_product_template" />
 		</record>
 
-		<record id="export_product_tmpl_68" model="product.product">
+		<record id="configurator.export_product_tmpl_68_product_template" model="product.product">
 			<field name = "name">trina 4 (copy)</field>
 			<field name = "sequence">1</field>
 			<field name = "detailed_type">product</field>
@@ -2112,7 +2112,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
 		</record>
-		<record id="export_bom_25" model="mrp.bom">
+		<record id="configurator.export_bom_25" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -2128,38 +2128,38 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_68_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.export_product_tmpl_68_product_template_product_template" />
 		</record>
 
-		<record id="export_bom_line_116" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_116" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_25" />
-			<field name = "product_id" ref = "export_product_tmpl_63" />
+			<field name = "bom_id" ref = "configurator.export_bom_25" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_63_product_template" />
 		</record>
 
-		<record id="export_bom_line_117" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_117" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_25" />
-			<field name = "product_id" ref = "export_product_tmpl_64" />
+			<field name = "bom_id" ref = "configurator.export_bom_25" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_64_product_template" />
 		</record>
 
-		<record id="export_bom_line_118" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_118" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_25" />
-			<field name = "product_id" ref = "export_product_tmpl_65" />
+			<field name = "bom_id" ref = "configurator.export_bom_25" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_65_product_template" />
 		</record>
 
-		<record id="export_bom_line_119" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_119" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_25" />
-			<field name = "product_id" ref = "export_product_tmpl_66" />
+			<field name = "bom_id" ref = "configurator.export_bom_25" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_66_product_template" />
 		</record>
 
-		<record id="export_product_tmpl_69" model="product.product">
+		<record id="configurator.export_product_tmpl_69_product_template" model="product.product">
 			<field name = "name">trina 4 (copy) (copy)</field>
 			<field name = "sequence">1</field>
 			<field name = "detailed_type">product</field>
@@ -2175,7 +2175,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
 		</record>
-		<record id="export_bom_26" model="mrp.bom">
+		<record id="configurator.export_bom_26" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -2191,38 +2191,38 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_69_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.export_product_tmpl_69_product_template_product_template" />
 		</record>
 
-		<record id="export_bom_line_120" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_120" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_26" />
-			<field name = "product_id" ref = "export_product_tmpl_63" />
+			<field name = "bom_id" ref = "configurator.export_bom_26" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_63_product_template" />
 		</record>
 
-		<record id="export_bom_line_121" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_121" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_26" />
-			<field name = "product_id" ref = "export_product_tmpl_64" />
+			<field name = "bom_id" ref = "configurator.export_bom_26" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_64_product_template" />
 		</record>
 
-		<record id="export_bom_line_122" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_122" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_26" />
-			<field name = "product_id" ref = "export_product_tmpl_65" />
+			<field name = "bom_id" ref = "configurator.export_bom_26" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_65_product_template" />
 		</record>
 
-		<record id="export_bom_line_123" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_123" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_26" />
-			<field name = "product_id" ref = "export_product_tmpl_66" />
+			<field name = "bom_id" ref = "configurator.export_bom_26" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_66_product_template" />
 		</record>
 
-		<record id="export_product_tmpl_70" model="product.product">
+		<record id="configurator.export_product_tmpl_70_product_template" model="product.product">
 			<field name = "name">trina 4 (copy) (copy) (copy)</field>
 			<field name = "sequence">1</field>
 			<field name = "detailed_type">product</field>
@@ -2238,7 +2238,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
 		</record>
-		<record id="export_bom_27" model="mrp.bom">
+		<record id="configurator.export_bom_27" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -2254,38 +2254,38 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_70_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.export_product_tmpl_70_product_template_product_template" />
 		</record>
 
-		<record id="export_bom_line_124" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_124" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_27" />
-			<field name = "product_id" ref = "export_product_tmpl_63" />
+			<field name = "bom_id" ref = "configurator.export_bom_27" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_63_product_template" />
 		</record>
 
-		<record id="export_bom_line_125" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_125" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_27" />
-			<field name = "product_id" ref = "export_product_tmpl_64" />
+			<field name = "bom_id" ref = "configurator.export_bom_27" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_64_product_template" />
 		</record>
 
-		<record id="export_bom_line_126" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_126" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_27" />
-			<field name = "product_id" ref = "export_product_tmpl_65" />
+			<field name = "bom_id" ref = "configurator.export_bom_27" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_65_product_template" />
 		</record>
 
-		<record id="export_bom_line_127" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_127" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_27" />
-			<field name = "product_id" ref = "export_product_tmpl_66" />
+			<field name = "bom_id" ref = "configurator.export_bom_27" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_66_product_template" />
 		</record>
 
-		<record id="export_product_tmpl_67" model="product.product">
+		<record id="configurator.export_product_tmpl_67_product_template" model="product.product">
 			<field name = "name">trina 4</field>
 			<field name = "sequence">1</field>
 			<field name = "detailed_type">product</field>
@@ -2301,7 +2301,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
 		</record>
-		<record id="export_bom_22" model="mrp.bom">
+		<record id="configurator.export_bom_22" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -2317,38 +2317,38 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_67_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.export_product_tmpl_67_product_template_product_template" />
 		</record>
 
-		<record id="export_bom_line_104" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_104" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_22" />
-			<field name = "product_id" ref = "export_product_tmpl_63" />
+			<field name = "bom_id" ref = "configurator.export_bom_22" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_63_product_template" />
 		</record>
 
-		<record id="export_bom_line_105" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_105" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_22" />
-			<field name = "product_id" ref = "export_product_tmpl_64" />
+			<field name = "bom_id" ref = "configurator.export_bom_22" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_64_product_template" />
 		</record>
 
-		<record id="export_bom_line_106" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_106" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_22" />
-			<field name = "product_id" ref = "export_product_tmpl_65" />
+			<field name = "bom_id" ref = "configurator.export_bom_22" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_65_product_template" />
 		</record>
 
-		<record id="export_bom_line_107" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_107" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_22" />
-			<field name = "product_id" ref = "export_product_tmpl_66" />
+			<field name = "bom_id" ref = "configurator.export_bom_22" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_66_product_template" />
 		</record>
 
-		<record id="export_product_tmpl_71" model="product.product">
+		<record id="configurator.export_product_tmpl_71_product_template" model="product.product">
 			<field name = "name">trina 5</field>
 			<field name = "sequence">1</field>
 			<field name = "detailed_type">product</field>
@@ -2364,7 +2364,7 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "route_ids" eval = "[(6, 0, [ref('mrp.route_warehouse0_manufacture')])]" />
 		</record>
-		<record id="export_bom_28" model="mrp.bom">
+		<record id="configurator.export_bom_28" model="mrp.bom">
 			<field name = "active">True</field>
 			<field name = "type">normal</field>
 			<field name = "product_qty">1.0</field>
@@ -2380,35 +2380,35 @@
 			<field name = "wind_load">10.0</field>
 			<field name = "tilt_angle">45.0</field>
 			<field name = "installation_type">roof</field>
-			<field name = "product_tmpl_id" ref = "export_product_tmpl_71_product_template" />
+			<field name = "product_tmpl_id" ref = "configurator.export_product_tmpl_71_product_template_product_template" />
 		</record>
 
-		<record id="export_bom_line_128" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_128" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_28" />
-			<field name = "product_id" ref = "export_product_tmpl_67" />
+			<field name = "bom_id" ref = "configurator.export_bom_28" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_67_product_template" />
 		</record>
 
-		<record id="export_bom_line_129" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_129" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_28" />
-			<field name = "product_id" ref = "export_product_tmpl_68" />
+			<field name = "bom_id" ref = "configurator.export_bom_28" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_68_product_template" />
 		</record>
 
-		<record id="export_bom_line_130" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_130" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_28" />
-			<field name = "product_id" ref = "export_product_tmpl_69" />
+			<field name = "bom_id" ref = "configurator.export_bom_28" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_69_product_template" />
 		</record>
 
-		<record id="export_bom_line_131" model="mrp.bom.line">
+		<record id="configurator.export_bom_line_131" model="mrp.bom.line">
 			<field name = "product_qty">1.0</field>
 			<field name = "sequence">1</field>
-			<field name = "bom_id" ref = "export_bom_28" />
-			<field name = "product_id" ref = "export_product_tmpl_70" />
+			<field name = "bom_id" ref = "configurator.export_bom_28" />
+			<field name = "product_id" ref = "configurator.export_product_tmpl_70_product_template" />
 		</record>
 
 

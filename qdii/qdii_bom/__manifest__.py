@@ -11,7 +11,7 @@
     'summary': 'QDII BOM Manipulation',
     'depends': ['product', 'stock', 'resource', 'mrp', 'sale', 'base_automation', 'report_xml'],
     'data': [
-        'views/menu.xml',
+    #    'views/menu.xml',
         'views/bom.xml',
         'views/product.xml',
 
@@ -19,8 +19,9 @@
         'data/automated_actions.xml',
     ],
     'demo': [],
-    'application': True,
-    'uninstall_hook': 'uninstall_hook',
+    #'application': True,
+    #'uninstall_hook': 'uninstall_hook',
+    "installable": True,
     'assets': {
 
     },
