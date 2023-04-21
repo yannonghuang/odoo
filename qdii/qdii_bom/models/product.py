@@ -31,6 +31,7 @@ class QdiiProduct(models.Model):
         compute='_compute_bom_cost',
         search='_search_bom_cost',
         help=_("BoM Cost"),
+        tracking=True
     )
 
     bom_aggregate = fields.Char(
