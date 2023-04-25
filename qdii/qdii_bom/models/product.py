@@ -31,9 +31,17 @@ class QdiiProduct(models.Model):
         compute='_compute_bom_cost',
         search='_search_bom_cost',
         help=_("BoM Cost"),
+        #tracking=True
+    )
+
+    list_price = fields.Float(
         tracking=True
     )
 
+    standard_price = fields.Float(
+        tracking=True
+    )
+    
     bom_aggregate = fields.Char(
         _("BoM Aggregate"),
         compute='_compute_bom_aggregate',
