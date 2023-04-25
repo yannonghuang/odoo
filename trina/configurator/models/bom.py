@@ -10,8 +10,9 @@ from odoo.addons.qdii_bom.models.bom import QdiiBom
 _logger = logging.getLogger(__name__)
 
 class TrinaBom(QdiiBom):
-    _inherit = ['mrp.bom']
+    #_inherit = ['mrp.bom']
     _description = 'Trina BOM'
+    _name = 'mrp.bom'
     #_dico = {}
     #_rec_names_search = ['product_tmpl_id', 'code', 'bom_aggregate']
 

@@ -23,6 +23,9 @@
                     <field name="bom_cost"/>
                     <field name="number_of_components"/>
                 </xpath>
+                <xpath expr="//field[@name='message_ids']" position="before">
+                    <field name="activity_ids"/>
+                </xpath>                
                 <!-- xpath expr="//page[@name='components']" position="before">
                     <page string="Metrics" name="metrics" >
                         <group name="length">

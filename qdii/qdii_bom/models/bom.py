@@ -1,8 +1,9 @@
 #from odoo.addons.mrp.report.mrp_report_bom_structure import ReportBomStructure
-from odoo import fields, _
+from odoo import fields, models, _
 from odoo import api
 from odoo.exceptions import ValidationError
 from odoo.addons.mrp.models.product import OPERATORS
+from odoo.addons.mrp.models.mrp_bom import MrpBom
 
 import logging
 
@@ -10,9 +11,12 @@ from odoo.addons.qdii_bom.utils.bom_aggregate import BomAggregate
 
 _logger = logging.getLogger(__name__)
 
-class QdiiBom(BomAggregate):
-    _inherit = ['mrp.bom']
+#class QdiiBom(BomAggregate):
+#    _inherit = ['mrp.bom']
+class QdiiBom(models.Model):
+    _inherit = ['mrp.bom', 'utils.bom_aggregate', 'mail.activity.mixin']
     _description = 'QDII BOM'
+    _name = 'mrp.bom'
     #_dico = {}
     _rec_names_search = ['product_tmpl_id', 'code', 'bom_aggregate']
 
