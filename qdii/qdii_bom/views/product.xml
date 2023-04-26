@@ -2,16 +2,24 @@
 <odoo>
     <data>
         <record id="qdii_product_form_view" model="ir.ui.view">
-            <field name="name">trina.product.form.view</field>
+            <field name="name">qdii.product.form.view</field>
             <field name="model">product.template</field>
-            <field name="inherit_id" ref="mrp.view_mrp_product_template_form_inherited"/>
+            <!-- field name="inherit_id" ref="mrp.view_mrp_product_template_form_inherited"/ -->
+            <field name="inherit_id" ref="mrp_account.product_product_ext_form_view2"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='categ_id']" position="before">
-                    <label for="bom_cost"/>
-                    <div>
+                    <field name="bom_count" invisible="1"/> 
+                    <label for="bom_cost"
+                        attrs="{'invisible': [('bom_count', '=', 0)]}"                            
+                    />                                         
+                    <div attrs="{'invisible': [('bom_count', '=', 0)]}" >                   
                         <field name="bom_cost" class="oe_inline"/>
                     </div>
                 </xpath>
+
+                <xpath expr="//button[@name='button_bom_cost']" position="attributes">            
+                    <attribute name="invisible">1</attribute>        
+                </xpath>                                 
             </field>
         </record>
 
@@ -22,7 +30,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='company_id']" position="after">
                     <field name="bom_cost" string="BoM Cost" widget='monetary'/>
-                </xpath>
+                </xpath>             
             </field>
         </record>
 

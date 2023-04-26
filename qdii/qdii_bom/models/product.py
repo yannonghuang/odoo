@@ -49,14 +49,27 @@ class QdiiProduct(models.Model):
         help=_("BoM Aggregate")
     )
 
-    @api.depends('bom_ids.bom_cost', 'standard_price')
+#    @api.depends('bom_cost')
+    def _compute_standard_price(self):
+        unique_variants = self.filtered(lambda record: len(record.product_variant_ids) == 1)
+        for record in unique_variants:
+            if record.product_variant_ids.standard_price > 0:
+                record.standard_price = record.product_variant_ids.standard_price
+            else:
+                record.standard_price = record.bom_cost
+        for record in (self - unique_variants):
+            record.standard_price = record.bom_cost
+
+
+    #@api.depends('bom_ids.bom_cost', 'standard_price')
+    @api.depends('bom_ids.bom_cost')
     def _compute_bom_cost(self):
         for record in self:
             try:
                 record.bom_cost = record.bom_ids[0].bom_cost
             except:
-                record.bom_cost = record.standard_price
-
+                record.bom_cost = 0
+                #record.bom_cost = record.standard_price
 
     def _search_bom_cost(self, operator, value):
         ids = self.env['product.template'].search([]).filtered(
@@ -102,7 +115,8 @@ class QdiiProduct(models.Model):
 
     @api.returns('self', lambda value: value.id)
     def copy(self, default=None):
-        templateCopy = super(TrinaProduct, self).copy(default=default)
+        templateCopy = super().copy(default=default)
+        #templateCopy = super(QdiiProduct, self).copy(default=default)
         for template in self:
             if template.bom_count > 0:
                 template.bom_ids[0].copy({'product_tmpl_id': templateCopy.id})
