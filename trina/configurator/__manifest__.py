@@ -11,6 +11,7 @@
     'summary': 'Trina Product Configurator',
     'depends': ['qdii_bom'],
     'data': [
+        'data/uom_data.xml',
         'views/menu.xml',
         'views/bom.xml',
         'views/product.xml',

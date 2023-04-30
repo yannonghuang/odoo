@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- UOM Categories -->
+    <record id="product_uom_categ_power" model="uom.category">
+        <field name="name">Power</field>
+    </record>
+    <record id="product_uom_categ_angle" model="uom.category">
+        <field name="name">Angle</field>
+    </record>
+    <record id="product_uom_categ_wind_load" model="uom.category">
+        <field name="name">Wind Load</field>
+    </record>
+
+    <!-- UOM.UOM -->
+    <!-- POWER -->
+    <record id="product_uom_kw" model="uom.uom">
+        <field name="name">kw</field>
+        <field name="category_id" ref="product_uom_categ_power"/>
+        <field name="factor">1.0</field>
+        <field name="uom_type">reference</field>
+    </record>
+
+    <!-- ANGLE -->
+    <record id="product_uom_degree" model="uom.uom">
+        <field name="name">degree(s)</field>
+        <field name="category_id" ref="product_uom_categ_angle"/>
+        <field name="factor">1.0</field>
+        <field name="uom_type">reference</field>
+    </record>
+
+    <!-- WIND LOAD -->
+    <record id="product_uom_wind_load" model="uom.uom">
+        <field name="name">Pa</field>
+        <field name="category_id" ref="product_uom_categ_wind_load"/>
+        <field name="factor">1.0</field>
+        <field name="uom_type">reference</field>
+    </record>
+
+</odoo>

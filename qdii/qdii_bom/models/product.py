@@ -121,3 +121,8 @@ class QdiiProduct(models.Model):
             if template.bom_count > 0:
                 template.bom_ids[0].copy({'product_tmpl_id': templateCopy.id})
         return templateCopy
+    
+
+    length_uom_name = fields.Char(string='Length unit of measure label', compute='_compute_length_uom_name')
+    def _compute_length_uom_name(self):
+        self.length_uom_name = self._get_length_uom_name_from_ir_config_parameter()    

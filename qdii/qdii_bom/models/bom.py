@@ -186,3 +186,20 @@ class QdiiBom(models.Model):
     @api.depends_context('company')
     def _compute_cost_currency_id(self):
         self.cost_currency_id = self.product_tmpl_id.cost_currency_id
+
+
+    volume_uom_name = fields.Char(string='Volume unit of measure label', compute='_compute_volume_uom_name')
+    def _compute_volume_uom_name(self):
+        self.volume_uom_name = self.product_tmpl_id.volume_uom_name
+
+    weight_uom_name = fields.Char(string='Weight unit of measure label', compute='_compute_weight_uom_name')
+    def _compute_weight_uom_name(self):
+        self.weight_uom_name = self.product_tmpl_id.weight_uom_name
+
+    length_uom_name = fields.Char(string='Length unit of measure label', compute='_compute_length_uom_name')
+    def _compute_length_uom_name(self):
+        self.length_uom_name = self.product_tmpl_id.length_uom_name
+
+    uom_name = fields.Char(string='Unit of Measure Name', compute='_compute_uom_name')        
+    def _compute_uom_name(self):
+        self.uom_name = self.product_tmpl_id.uom_name           

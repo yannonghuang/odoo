@@ -29,30 +29,32 @@
                             <label for="panel_length"/>
                             <div class="o_row" name="panel_length">
                                 <field name="panel_length" class="oe_inline"/>
-                                <!-- field name="length_uom_name"/ -->
+                                <field name="length_uom_name" />
                             </div>
                             <label for="panel_width"/>
                             <div class="o_row" name="panel_width">
                                 <field name="panel_width" class="oe_inline"/>
-                                <!-- field name="length_uom_name"/ -->
+                                <field name="length_uom_name" />
                             </div>
                             <label for="panel_power"/>
                             <div class="o_row" name="panel_power">
                                 <field name="panel_power" class="oe_inline"/>
+                                <field name="power_uom_name" />
                             </div>
                             <label for="total_power"/>
                             <div class="o_row" name="total_power">
                                 <field name="total_power" class="oe_inline"/>
+                                <field name="power_uom_name" />
                             </div>
                             <label for="panel_spacing"/>
                             <div class="o_row" name="panel_spacing">
                                 <field name="panel_spacing" class="oe_inline"/>
-                                <!-- field name="length_uom_name"/ -->
+                                <field name="length_uom_name" />
                             </div>
                             <label for="channel_length"/>
                             <div class="o_row" name="channel_length">
                                 <field name="channel_length" class="oe_inline"/>
-                                <!-- field name="length_uom_name"/ -->
+                                <field name="length_uom_name" />
                             </div>
                             <label for="number_of_isolators"/>
                             <div class="o_row" name="number_of_isolators">
@@ -61,10 +63,12 @@
                             <label for="wind_load"/>
                             <div class="o_row" name="wind_load">
                                 <field name="wind_load" class="oe_inline"/>
+                                <field name="wind_load_uom_name" />
                             </div>
                             <label for="tilt_angle"/>
                             <div class="o_row" name="tilt_angle">
                                 <field name="tilt_angle" class="oe_inline"/>
+                                <field name="angle_uom_name" />
                             </div>
                             <label for="installation_type"/>
                             <div class="o_row" name="installation_type">

@@ -73,31 +73,9 @@ class TrinaBom(QdiiBom):
         required="True"
     )
 
-    length_uom_name = fields.Char(string='Length unit of measure label', compute='_compute_length_uom_name')
-
     def _compute_total_power(self):
         self.total_power = self.panel_power * self.number_of_panels
-
-    def _compute_length_uom_name(self):
-        self.length_uom_name = self._get_length_uom_name_from_ir_config_parameter()
-
-    @api.model
-    def _get_length_uom_name_from_ir_config_parameter(self):
-        return self._get_length_uom_id_from_ir_config_parameter().display_name
-
-    @api.model
-    def _get_length_uom_id_from_ir_config_parameter(self):
-        """ Get the unit of measure to interpret the `length`, 'width', 'height' field.
-        By default, we considerer that length are expressed in millimeters. Users can configure
-        to express them in feet by adding an ir.config_parameter record with "product.volume_in_cubic_feet"
-        as key and "1" as value.
-        """
-        product_length_in_feet_param = self.env['ir.config_parameter'].sudo().get_param('product.volume_in_cubic_feet')
-        if product_length_in_feet_param == '1':
-            return self.env.ref('uom.product_uom_foot')
-        else:
-            return self.env.ref('uom.product_uom_millimeter')
-
+        
     @api.constrains('wind_load')
     def _check_wind_load(self):
         for record in self:
@@ -116,3 +94,16 @@ class TrinaBom(QdiiBom):
                         raise ValidationError("Component %s\'s wind load does not meet requirements." % (product.display_name))
         # all records passed the test, don't return anything
 
+
+    power_uom_name = fields.Char(string='Power unit of measure label', compute='_compute_power_uom_name')
+    def _compute_power_uom_name(self):
+        self.power_uom_name = self.product_tmpl_id.power_uom_name
+
+    angle_uom_name = fields.Char(string='Angle unit of measure label', compute='_compute_angle_uom_name')
+    def _compute_angle_uom_name(self):
+        self.angle_uom_name = self.product_tmpl_id.angle_uom_name
+
+    wind_load_uom_name = fields.Char(string='Wind load unit of measure label', compute='_compute_wind_load_uom_name')
+    def _compute_wind_load_uom_name(self):
+        self.wind_load_uom_name = self.product_tmpl_id.wind_load_uom_name        
+     
