@@ -12,8 +12,10 @@
                     <label for="bom_cost"
                         attrs="{'invisible': [('bom_count', '=', 0)]}"                            
                     />                                         
-                    <div attrs="{'invisible': [('bom_count', '=', 0)]}" >                   
-                        <field name="bom_cost" class="oe_inline"/>
+                    <div attrs="{'invisible': [('bom_count', '=', 0)]}">                   
+                        <field name="bom_cost" class="oe_inline" 
+                            widget='monetary' options="{'currency_field': 'cost_currency_id'}" optional="show" readonly="1"
+                        />
                     </div>
                 </xpath>
 
@@ -29,7 +31,9 @@
             <field name="inherit_id" ref="product.product_template_tree_view"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='company_id']" position="after">
-                    <field name="bom_cost" string="BoM Cost" widget='monetary'/>
+                    <field name="bom_cost" string="BoM Cost" widget='monetary'
+                        options="{'currency_field': 'cost_currency_id'}" optional="show" readonly="1"
+                    />
                 </xpath>             
             </field>
         </record>

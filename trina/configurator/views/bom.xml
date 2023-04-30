@@ -29,12 +29,12 @@
                             <label for="panel_length"/>
                             <div class="o_row" name="panel_length">
                                 <field name="panel_length" class="oe_inline"/>
-                                <field name="length_uom_name"/>
+                                <!-- field name="length_uom_name"/ -->
                             </div>
                             <label for="panel_width"/>
                             <div class="o_row" name="panel_width">
                                 <field name="panel_width" class="oe_inline"/>
-                                <field name="length_uom_name"/>
+                                <!-- field name="length_uom_name"/ -->
                             </div>
                             <label for="panel_power"/>
                             <div class="o_row" name="panel_power">
@@ -47,12 +47,12 @@
                             <label for="panel_spacing"/>
                             <div class="o_row" name="panel_spacing">
                                 <field name="panel_spacing" class="oe_inline"/>
-                                <field name="length_uom_name"/>
+                                <!-- field name="length_uom_name"/ -->
                             </div>
                             <label for="channel_length"/>
                             <div class="o_row" name="channel_length">
                                 <field name="channel_length" class="oe_inline"/>
-                                <field name="length_uom_name"/>
+                                <!-- field name="length_uom_name"/ -->
                             </div>
                             <label for="number_of_isolators"/>
                             <div class="o_row" name="number_of_isolators">

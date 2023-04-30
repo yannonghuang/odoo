@@ -13,7 +13,7 @@
                             <label for="length"/>
                             <div class="o_row" name="length">
                                 <field name="length" class="oe_inline"/>
-                                <field name="length_uom_name"/>
+                                <!-- field name="length_uom_name"/ -->
                             </div>
                             <label for="default_code"/>
                             <div class="o_row" name="default_code">
@@ -31,10 +31,10 @@
                             <div class="o_row" name="wind_load">
                                 <field name="wind_load" class="oe_inline"/>
                             </div>
-                            <label for="uom_name"/>
+                            <!-- label for="uom_name"/>
                             <div class="o_row" name="uom_name">
                                 <field name="uom_id" class="oe_inline"/>
-                            </div>
+                            </div -->
                         </group>
                     </page>
                 </xpath>

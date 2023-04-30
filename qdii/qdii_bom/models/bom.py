@@ -11,8 +11,6 @@ from odoo.addons.qdii_bom.utils.bom_aggregate import BomAggregate
 
 _logger = logging.getLogger(__name__)
 
-#class QdiiBom(BomAggregate):
-#    _inherit = ['mrp.bom']
 class QdiiBom(models.Model):
     _inherit = ['mrp.bom', 'utils.bom_aggregate', 'mail.activity.mixin']
     _description = 'QDII BOM'
@@ -56,6 +54,12 @@ class QdiiBom(models.Model):
         help=_("BoM Lead Time"),
     )
 
+
+    currency_id = fields.Many2one(
+        'res.currency', 'Currency', compute='_compute_currency_id')
+    cost_currency_id = fields.Many2one(
+        'res.currency', 'Cost Currency', compute='_compute_cost_currency_id')
+    
     def _get_report_data(self, record):
         return super()._get_report_data(record.id)
         #if record not in self._dico:
@@ -174,3 +178,11 @@ class QdiiBom(models.Model):
             ids = self.env['mrp.bom'].search([]).filtered(
                 lambda x: x.bom_lead_time != value).ids
         return [('id', 'in', ids)]
+
+    @api.depends('company_id')
+    def _compute_currency_id(self):
+        self.currency_id = self.product_tmpl_id.currency_id
+
+    @api.depends_context('company')
+    def _compute_cost_currency_id(self):
+        self.cost_currency_id = self.product_tmpl_id.cost_currency_id
