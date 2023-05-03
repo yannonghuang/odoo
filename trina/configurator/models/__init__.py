@@ -4,3 +4,4 @@
 
 from . import bom
 from . import product
+from . import res_company

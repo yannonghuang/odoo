@@ -12,6 +12,7 @@
     'depends': ['qdii_bom'],
     'data': [
         'data/uom_data.xml',
+        'data/identities_data.xml',
         'views/menu.xml',
         'views/bom.xml',
         'views/product.xml',

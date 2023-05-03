@@ -54,7 +54,10 @@ class QdiiBom(models.Model):
         help=_("BoM Lead Time"),
     )
 
-
+    company_id = fields.Many2one(
+        'res.company', 'Company', index=True,
+        default=False)
+    
     currency_id = fields.Many2one(
         'res.currency', 'Currency', compute='_compute_currency_id')
     cost_currency_id = fields.Many2one(

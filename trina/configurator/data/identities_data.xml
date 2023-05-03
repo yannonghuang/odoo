@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="trina_as_partner" model="res.partner" context="{'default_is_company': True}">
+            <field name="name">Trina Solar</field>
+            <field name="company_id" eval="None"/>
+            <field name="is_company" eval="True"/>
+            <field name="street">1 Trina St</field>
+            <field name="city">Chang Zhou</field>
+            <field name="zip">888888</field>
+            <field name='country_id' ref='base.cn'/>
+            <field name='state_id' ref='base.state_cn_JS'/>            
+            <field name="phone">+1 888-888-8888</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+            <field name="email">info@trina.example.com</field>
+            <field name="website">www.trina.example.com</field> 
+
+            <field name="company_name">Trina</field>     
+        </record>
+
+        <record id="trina_as_company" model="res.company">
+            <field name="name">Trina Solar</field>
+            <field name="partner_id" ref="trina_as_partner"/>
+            <field name="currency_id" ref="base.CNY"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <record id="trina_us_as_partner" model="res.partner" context="{'default_is_company': True}">
+            <field name="name">Trina Solar (US)</field>
+            <field name="company_id" eval="None"/>
+            <field name="is_company" eval="True"/>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+            <field name="email">info@trina.example.com</field>
+            <field name="website">www.trina.example.com</field> 
+
+            <field name="street">1 University Ave</field>
+            <field name="city">Palo Alto</field>
+            <field name="zip">95140</field>
+            <field name='country_id' ref='base.us'/>
+            <field name='state_id' ref='base.state_us_5'/>            
+            <field name="phone">+1 999-999-9999</field>   
+        </record>
+
+        <record id="base.main_company" model="res.company">
+            <field name="name">Trina Solar (US)</field>
+            <field name="partner_id" ref="trina_us_as_partner"/>
+            <field name="parent_id" ref="trina_as_company"/>            
+            <field name="currency_id" ref="base.USD"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <record model="res.partner" id="base.partner_admin">
+            <field name="name">Trina Admin</field>
+            <field name="parent_id" ref="trina_as_partner"/>
+
+            <field name="tz">Asia/Shanghai</field>      
+            <field name="phone">+1 555-555-5555</field>
+            <field name="email">admin@trina.example.com</field>
+            <field name="image_1920" type="base64" file="base/static/img/partner_root-image.jpg"/>
+        </record>
+
+        <record id="base.user_admin" model="res.users">
+
+            <!-- field name="company_ids" eval="[Command.link(ref('base.main_company'))]"/ -->
+            <field name="company_ids" eval="[Command.set([ref('base.main_company'), ref('trina_as_company')])]"/>
+
+            <field name="company_id" ref="trina_as_company"/>
+        </record>
+
+    </data> 
+</odoo>
+

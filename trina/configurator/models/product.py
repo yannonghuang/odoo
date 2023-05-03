@@ -59,4 +59,7 @@ class TrinaProduct(QdiiProduct):
     def _compute_wind_load_uom_name(self):
         self.wind_load_uom_name = self.env.ref('configurator.product_uom_wind_load').display_name
 
-        
+    
+
+
+         
